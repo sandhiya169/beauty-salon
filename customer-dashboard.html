@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard — Stackly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+ <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="dash-body">
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <div class="dash-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <a href="customer-dashboard.html" class="dash-sidebar__brand"><img src="assets/images/stackly-white.webp" alt="Stackly logo" class="dash-logo-img"></a>
+      <div class="dash-sidebar__role">Customer Dashboard</div>
+      <div class="dash-sidebar__user-email"></div>
+
+
+
+      <nav class="dash-nav">
+        <button class="dash-nav__link is-active" data-section="overview" data-label="Overview">
+          <i class="fa-solid fa-table-cells-large dash-icon"></i>
+          Overview
+        </button>
+        <button class="dash-nav__link" data-section="my-appointments" data-label="My Appointments">
+          <i class="fa-solid fa-calendar-check dash-icon"></i>
+          My Appointments
+        </button>
+        <button class="dash-nav__link" data-section="favorites" data-label="Favorites">
+          <i class="fa-solid fa-heart dash-icon"></i>
+          Favorites
+        </button>
+        <button class="dash-nav__link" data-section="profile" data-label="Profile">
+          <i class="fa-solid fa-user dash-icon"></i>
+          Profile
+        </button>
+      </nav>
+
+      <div class="dash-sidebar__foot">
+        <button class="dash-nav__link is-home js-home">
+          <i class="fa-solid fa-house dash-icon"></i>
+          Back to Home
+        </button>
+        <button class="dash-nav__link is-logout js-logout">
+          <i class="fa-solid fa-right-from-bracket dash-icon"></i>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar__left">
+          <button class="dash-menu-toggle" id="dashMenuToggle"
+            aria-label="Open menu"><span></span><span></span><span></span></button>
+          <h1 class="dash-topbar__title" id="dashTopbarTitle">Overview</h1>
+        </div>
+        <div class="dash-topbar__right">
+          <button class="dash-bell js-action" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <span class="dash-user-email"></span>
+          <div class="dash-avatar">M</div>
+        </div>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- OVERVIEW -->
+        <section class="dash-section is-active" id="overview">
+          <div class="dash-section__head">
+            <h2>Welcome back, Customer</h2>
+            <p>Here's what's coming up and a few things picked for you.</p>
+          </div>
+
+          <div class="panel">
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-card__label">Loyalty tier</div>
+                <div class="stat-card__value">Gold</div>
+                <div class="stat-card__sub">88 pts to Platinum</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Visits this year</div>
+                <div class="stat-card__value">14</div>
+                <div class="stat-card__sub">since Jan 2026</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Reward points</div>
+                <div class="stat-card__value">412</div>
+                <div class="stat-card__sub">worth ₹412 credit</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Your next appointment</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Stylist</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>The Stackly Hour</td>
+                    <td>Rhea Kapoor</td>
+                    <td>Sep 18, 11:00 AM</td>
+                    <td>
+                      <div class="btn-row"><button class="btn btn--ghost btn--sm js-action">Reschedule</button><button
+                          class="btn btn--ghost btn--sm js-action">Cancel</button></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Recommended for you</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <h4>Botanical Facial</h4>
+                <p>A calming skin ritual with cold-pressed botanical oils.</p>
+                <span class="badge badge--gold">₹2,800</span>
+                <button class="btn btn--primary btn--sm js-action">Book Now</button>
+              </div>
+              <div class="info-card">
+                <h4>Colour Refresh</h4>
+                <p>Gloss and tone maintenance between full colour visits.</p>
+                <span class="badge badge--gold">₹1,950</span>
+                <button class="btn btn--primary btn--sm js-action">Book Now</button>
+              </div>
+              <div class="info-card">
+                <h4>Nail Artistry</h4>
+                <p>Precision shaping with seasonal nail art detailing.</p>
+                <span class="badge badge--gold">₹1,200</span>
+                <button class="btn btn--primary btn--sm js-action">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Loyalty progress (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Loyalty progress</h3>
+              <span class="badge badge--gold">Gold member</span>
+            </div>
+            <div class="dash-loyalty">
+              <div class="dash-loyalty__top">
+                <div><strong>412</strong> / 500 pts</div>
+                <span>88 pts to Platinum</span>
+              </div>
+              <div class="dash-meter" role="progressbar" aria-label="Progress to Platinum" aria-valuemin="0"
+                aria-valuemax="500" aria-valuenow="412"><span style="width:82%"></span></div>
+              <ul class="dash-tiers">
+                <li class="is-done">
+                  <span class="dash-tiers__icon"><i class="fa-solid fa-check"></i></span>
+                  <strong>Silver</strong>
+                  <small>0 pts · birthday treat</small>
+                </li>
+                <li class="is-done">
+                  <span class="dash-tiers__icon"><i class="fa-solid fa-check"></i></span>
+                  <strong>Gold</strong>
+                  <small>250 pts · you are here</small>
+                </li>
+                <li class="is-next">
+                  <span class="dash-tiers__icon"><i class="fa-solid fa-crown"></i></span>
+                  <strong>Platinum</strong>
+                  <small>500 pts · priority booking</small>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- MY APPOINTMENTS -->
+        <section class="dash-section" id="my-appointments">
+          <div class="dash-section__head">
+            <h2>My Appointments</h2>
+            <p>Everything upcoming, and a look back at your past visits.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Upcoming</h3>
+              <button class="btn btn--primary btn--sm js-action">Book New Appointment</button>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Stylist</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>The Stackly Hour</td>
+                    <td>Rhea Kapoor</td>
+                    <td>Sep 18, 11:00 AM</td>
+                    <td>
+                      <div class="btn-row"><button class="btn btn--ghost btn--sm js-action">Reschedule</button><button
+                          class="btn btn--ghost btn--sm js-action">Cancel</button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Botanical Facial</td>
+                    <td>Farah Sheikh</td>
+                    <td>Oct 2, 4:00 PM</td>
+                    <td>
+                      <div class="btn-row"><button class="btn btn--ghost btn--sm js-action">Reschedule</button><button
+                          class="btn btn--ghost btn--sm js-action">Cancel</button></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Past visits</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Stylist</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Precision Cut</td>
+                    <td>Rhea Kapoor</td>
+                    <td>Aug 14, 2026</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Book Again</button></td>
+                  </tr>
+                  <tr>
+                    <td>Colour Refresh</td>
+                    <td>Noor Iyer</td>
+                    <td>Jul 22, 2026</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Book Again</button></td>
+                  </tr>
+                  <tr>
+                    <td>Nail Artistry</td>
+                    <td>Sana Merchant</td>
+                    <td>Jun 30, 2026</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Book Again</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Cancellation policy</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <h4>24-hour notice</h4>
+                <p>Reschedule or cancel free of charge up to a day before.</p>
+              </div>
+              <div class="info-card">
+                <h4>Late cancellations</h4>
+                <p>A small fee applies within 24 hours of your slot.</p>
+              </div>
+              <div class="info-card">
+                <h4>No-shows</h4>
+                <p>Full service value is charged for missed appointments.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Before your visit (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Before your visit</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <span class="dash-step__num">1</span>
+                <h4>Arrive 10 minutes early</h4>
+                <p>Settle in with a cup of tea before your ritual begins.</p>
+              </div>
+              <div class="info-card">
+                <span class="dash-step__num">2</span>
+                <h4>Bring inspiration</h4>
+                <p>Photos of looks you love help your stylist plan the session.</p>
+              </div>
+              <div class="info-card">
+                <span class="dash-step__num">3</span>
+                <h4>Share your notes</h4>
+                <p>Tell us about sensitivities or preferences before you arrive.</p>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- FAVORITES -->
+        <section class="dash-section" id="favorites">
+          <div class="dash-section__head">
+            <h2>Favorites</h2>
+            <p>Your saved stylists and go-to services.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Favorite stylists</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <div class="info-card__avatar">R</div>
+                <h4>Rhea Kapoor</h4>
+                <p>Senior Stylist — cuts &amp; colour</p><button class="btn btn--ghost btn--sm js-action">View
+                  Profile</button>
+              </div>
+              <div class="info-card">
+                <div class="info-card__avatar">F</div>
+                <h4>Farah Sheikh</h4>
+                <p>Skin Specialist — facials &amp; peels</p><button class="btn btn--ghost btn--sm js-action">View
+                  Profile</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Favorite services</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <h4>The Stackly Hour</h4>
+                <p>Signature ritual — cut, treatment &amp; style.</p><button
+                  class="btn btn--primary btn--sm js-action">Book</button>
+              </div>
+              <div class="info-card">
+                <h4>Botanical Facial</h4>
+                <p>Calming skin ritual with botanical oils.</p><button
+                  class="btn btn--primary btn--sm js-action">Book</button>
+              </div>
+              <div class="info-card">
+                <h4>Precision Cut</h4>
+                <p>Sharp, considered shaping for any hair type.</p><button
+                  class="btn btn--primary btn--sm js-action">Book</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Discover more</h3>
+            </div>
+            <button class="btn btn--ghost js-action">Browse All Services</button>
+          </div>
+          <!-- Member offers (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Member offers</h3>
+            </div>
+            <div class="dash-coupons">
+              <div class="dash-coupon">
+                <div class="dash-coupon__main">
+                  <h4>Monsoon Glow Package</h4>
+                  <p>A botanical facial and scalp ritual, bundled for members.</p>
+                  <button class="btn btn--primary btn--sm js-action">Claim offer</button>
+                </div>
+                <div class="dash-coupon__side">
+                  <small>Save</small>
+                  <span class="dash-coupon__value">15%</span>
+                  <span class="dash-coupon__code">GLOW15</span>
+                </div>
+              </div>
+              <div class="dash-coupon">
+                <div class="dash-coupon__main">
+                  <h4>Refer a friend</h4>
+                  <p>When a friend books their first visit, you both earn points.</p>
+                  <button class="btn btn--primary btn--sm js-action">Share invite</button>
+                </div>
+                <div class="dash-coupon__side">
+                  <small>Earn</small>
+                  <span class="dash-coupon__value">+100</span>
+                  <span class="dash-coupon__code">BRING100</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- PROFILE -->
+        <section class="dash-section" id="profile">
+          <div class="dash-section__head">
+            <h2>Profile</h2>
+            <p>Your details, rewards and preferences.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Personal information</h3>
+              <button class="btn btn--ghost btn--sm js-action">Edit Profile</button>
+            </div>
+            <div class="profile-grid">
+              <div class="profile-field"><label>Full name</label>
+                <div>User</div>
+              </div>
+              <div class="profile-field"><label>Email</label>
+                <div>info@thestackly.com</div>
+              </div>
+              <div class="profile-field"><label>Phone</label>
+                <div>+91 98765 43210</div>
+              </div>
+              <div class="profile-field"><label>Member since</label>
+                <div>January 2026</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Loyalty &amp; rewards</h3>
+            </div>
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-card__label">Current tier</div>
+                <div class="stat-card__value">Gold</div>
+                <div class="stat-card__sub">88 pts to Platinum</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Points balance</div>
+                <div class="stat-card__value">412</div>
+                <div class="stat-card__sub">worth ₹412 credit</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Redeem</div>
+                <div class="stat-card__value">—</div>
+                <div class="stat-card__sub"><button class="btn btn--primary btn--sm js-action">Redeem Points</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Preferences</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <h4>Email reminders</h4>
+                <p>Get a reminder 24 hours before each appointment.</p><span class="badge badge--gold">On</span>
+              </div>
+              <div class="info-card">
+                <h4>SMS updates</h4>
+                <p>Receive booking confirmations by text message.</p><span class="badge badge--muted">Off</span>
+              </div>
+              <div class="info-card">
+                <h4>Preferred stylist</h4>
+                <p>Automatically suggest Rhea Kapoor when booking.</p><span class="badge badge--gold">On</span>
+              </div>
+            </div>
+            <div style="margin-top:1.2rem;">
+              <button class="btn btn--primary btn--sm js-action">Save Changes</button>
+            </div>
+          </div>
+          <!-- Account & security (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Account &amp; security</h3>
+            </div>
+            <div class="dash-settings">
+              <div class="dash-setting">
+                <span class="dash-setting__icon"><i class="fa-solid fa-lock"></i></span>
+                <div class="dash-setting__text">
+                  <h4>Password</h4>
+                  <p>Last changed 3 months ago.</p>
+                </div>
+                <div class="dash-setting__act">
+                  <button class="btn btn--ghost btn--sm js-action">Change</button>
+                </div>
+              </div>
+              <div class="dash-setting">
+                <span class="dash-setting__icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <div class="dash-setting__text">
+                  <h4>Two-step verification</h4>
+                  <p>Add an extra check whenever you sign in.</p>
+                </div>
+                <div class="dash-setting__act">
+                  <span class="badge badge--muted">Off</span>
+                  <button class="btn btn--ghost btn--sm js-action">Enable</button>
+                </div>
+              </div>
+              <div class="dash-setting">
+                <span class="dash-setting__icon"><i class="fa-solid fa-link"></i></span>
+                <div class="dash-setting__text">
+                  <h4>Connected accounts</h4>
+                  <p>Google · meera.shah@example.com</p>
+                </div>
+                <div class="dash-setting__act">
+                  <span class="badge badge--gold">Linked</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

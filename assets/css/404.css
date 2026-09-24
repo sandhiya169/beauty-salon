@@ -1,0 +1,370 @@
+/* ==========================================================================
+   Stackly — 404.css
+   Standalone error page. No nav/footer chrome. Loads AFTER style.css and
+   reuses its tokens: --emerald-*, --blush-*, --gold-*, --ivory-*, --ink-*,
+   --font-*, --pad, --ease, --radius-*, .btn, .cursor-dot
+   ========================================================================== */
+
+.err-body {
+  background: var(--emerald-900);
+  min-height: 100vh;
+}
+
+.err {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.2rem var(--pad) 3rem;
+}
+
+.err::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px 500px at 14% 18%, rgba(200, 164, 103, .16), transparent 60%),
+    radial-gradient(700px 600px at 88% 82%, rgba(180, 88, 107, .22), transparent 65%);
+  pointer-events: none;
+}
+
+/* small wordmark, not a full header */
+.err__mark {
+  display: inline-block;
+  height: 1.6rem;
+  line-height: 0;
+  align-self: center;
+  position: relative;
+  z-index: 2;
+}
+
+.err-logo-img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+
+.err__mark span {
+  color: var(--gold-500);
+}
+
+/* ==========================================================================
+   1. THE EMPTY CHAIR
+   ========================================================================== */
+.err__stage {
+  flex: 1;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 2rem 0;
+  justify-items: center;
+  text-align: center;
+}
+
+.err__chair-icon {
+  width: 100%;
+  max-width: 260px;
+  justify-self: center;
+  font-size: clamp(5rem, 9vw, 10rem);
+  color: var(--ivory-100);
+  filter: drop-shadow(0 30px 50px rgba(0, 0, 0, .35));
+}
+
+.err__eyebrow {
+  display: inline-block;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--gold-300);
+  position: relative;
+  margin-bottom: 1.1rem;
+}
+
+.err__eyebrow::before {
+  display: none;
+}
+
+.err__num {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(4.5rem, 13vw, 9.5rem);
+  line-height: .95;
+  color: var(--ivory-50);
+  margin-bottom: 1.3rem;
+}
+
+.err__num-mirror {
+  display: inline-block;
+  font-style: italic;
+  color: var(--blush-300);
+  transform: scaleX(-1);
+}
+
+.err__line {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 2.4vw, 1.55rem);
+  color: var(--ivory-50);
+  max-width: 30ch;
+  margin: 0 auto .9rem;
+}
+
+.err__sub {
+  font-size: .95rem;
+  color: rgba(250, 246, 239, .62);
+  max-width: 40ch;
+  margin: 0 auto 2.2rem;
+}
+
+.err__actions {
+  display: flex;
+  gap: .9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.err .btn--ghost {
+  color: var(--ivory-50);
+  border-color: rgba(250, 246, 239, .3);
+}
+
+.err .btn--ghost:hover {
+  border-color: var(--gold-300);
+  background: rgba(250, 246, 239, .06);
+}
+
+.err .btn--primary {
+  background: var(--gold-500);
+  color: var(--emerald-900);
+}
+
+.err .btn--primary:hover {
+  background: var(--gold-300);
+}
+
+/* ==========================================================================
+   2. QUICK ROOMS
+   ========================================================================== */
+.err__rooms {
+  position: relative;
+  z-index: 2;
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(250, 246, 239, .14);
+}
+
+.err__rooms-label {
+  font-size: .8rem;
+  letter-spacing: .04em;
+  color: rgba(250, 246, 239, .5);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.err__rooms-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  justify-content: center;
+}
+
+.err__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: rgba(250, 246, 239, .06);
+  border: 1px solid rgba(250, 246, 239, .16);
+  color: var(--ivory-50);
+  font-size: .88rem;
+  font-weight: 500;
+  padding: .7rem 1.2rem;
+  border-radius: 100px;
+  transition: background .4s ease, border-color .4s ease, transform .4s var(--ease);
+}
+
+.err__chip:hover {
+  transform: translateY(-3px);
+  background: rgba(250, 246, 239, .12);
+  border-color: var(--gold-500);
+}
+
+.err__chip-num {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold-300);
+  font-size: .85rem;
+}
+
+/* ==========================================================================
+   FLOATING BOTANICAL DECORATIONS
+   ========================================================================== */
+.err__petal {
+  position: absolute;
+  border-radius: 60% 40% 55% 45% / 45% 55% 40% 60%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: .5;
+}
+
+.err__petal--a {
+  width: 90px;
+  height: 60px;
+  top: 14%;
+  right: 10%;
+  background: rgba(180, 88, 107, .35);
+}
+
+.err__petal--b {
+  width: 60px;
+  height: 40px;
+  bottom: 22%;
+  left: 6%;
+  background: rgba(200, 164, 103, .4);
+}
+
+.err__petal--c {
+  width: 46px;
+  height: 32px;
+  top: 46%;
+  right: 20%;
+  background: rgba(214, 154, 166, .35);
+}
+
+/* ==========================================================================
+   RESPONSIVE — LAPTOP
+   ========================================================================== */
+@media (max-width: 1180px) {
+  .err__stage {
+    grid-template-columns: .7fr 1.3fr;
+  }
+
+  .err__chair-icon {
+    max-width: 220px;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE — TABLET
+   ========================================================================== */
+@media (max-width: 960px) {
+  .err__stage {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 1.6rem;
+    padding: 1.5rem 0;
+  }
+
+  .err__chair-icon {
+    max-width: 190px;
+  }
+
+  .err__eyebrow {
+    padding-left: 0;
+  }
+
+  .err__eyebrow::before {
+    display: none;
+  }
+
+  .err__line,
+  .err__sub {
+    max-width: 44ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .err__actions {
+    justify-content: center;
+  }
+
+  .err__rooms-row {
+    justify-content: center;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE — MOBILE
+   ========================================================================== */
+@media (max-width: 640px) {
+  .err {
+    padding: 1.6rem 1.25rem 2.2rem;
+  }
+
+  .err__chair-icon {
+    max-width: 150px;
+  }
+
+  .err__num {
+    margin-bottom: 1rem;
+  }
+
+  .err__actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .err__actions .btn {
+    justify-content: center;
+  }
+
+  .err__petal--a {
+    width: 60px;
+    height: 40px;
+    top: 8%;
+    right: 6%;
+  }
+
+  .err__petal--c {
+    display: none;
+  }
+
+  .err__rooms-row {
+    gap: .5rem;
+  }
+
+  .err__chip {
+    padding: .6rem 1rem;
+    font-size: .82rem;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE — SMALL MOBILE (320px)
+   ========================================================================== */
+@media (max-width: 400px) {
+  .err__num {
+    font-size: 3.6rem;
+  }
+
+  .err__line {
+    font-size: 1.05rem;
+  }
+
+  .err__chair-icon {
+    max-width: 130px;
+  }
+
+  .err__mark {
+    font-size: 1.2rem;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .err__petal {
+    display: none;
+  }
+}

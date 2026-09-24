@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Journal- Stackly Botanical Beauty House</title>
+  <meta name="description"
+    content="Notes on hair, skin, and slow beauty from the Stackly studio- scalp rituals, seasonal skin guides, and stories from behind the chair.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Shared site tokens + header/footer styles, then page-specific styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/blog.css">
+</head>
+
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__mark">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader__logo">
+    </div>
+    <div class="preloader__bar"><span id="preloaderProgress"></span></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR DOT (decorative, desktop only) ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="siteNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="nav__logo-img"></a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="blog.html" class="nav__link is-active" aria-current="page">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <a href="login.html" class="nav__cta">Login</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="blog.html" class="mobile-menu__link is-active" aria-current="page">Blog</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+    <a href="login.html" class="mobile-menu__book">Login</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ 1. JOURNAL HERO ============ -->
+    <section class="journal-hero" id="journalHero">
+      <div class="journal-hero__inner">
+
+        <!-- Left col: editorial text -->
+        <div class="journal-hero__content" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+          <p class="journal-hero__crumb" data-aos="fade-up" data-aos-delay="150"><a href="index.html">Home</a><span>/</span>Journal</p>
+          <p class="journal-hero__eyebrow" data-aos="fade-up" data-aos-delay="220">
+            <span class="journal-hero__eyebrow-line"></span>
+            The Stackly Journal
+          </p>
+          <h1 class="journal-hero__title" data-aos="fade-up" data-aos-delay="300">
+            <span class="journal-hero__line">Notes on hair, skin,</span>
+            <span class="journal-hero__line">and going <em>slower.</em></span>
+          </h1>
+          <p class="journal-hero__desc" data-aos="fade-up" data-aos-delay="380">Scalp rituals, seasonal skin guides, and honest stories from behind the chair-
+            written by the people who work it.</p>
+
+          <div class="journal-hero__actions" data-aos="fade-up" data-aos-delay="460">
+            <a href="#journalGrid" class="btn btn--primary">Read the journal</a>
+            <a href="#topics" class="journal-hero__browse">Browse topics <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+
+          <div class="journal-hero__stats" data-aos="fade-up" data-aos-delay="540">
+            <div class="journal-hero__stat">
+              <strong id="statPosts">0</strong>
+              <span>stories published</span>
+            </div>
+            <div class="journal-hero__stat">
+              <strong id="statCategories">0</strong>
+              <span>running topics</span>
+            </div>
+            <div class="journal-hero__stat">
+              <strong>Weekly</strong>
+              <span>new notes, most Thursdays</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right col: image stack -->
+        <div class="journal-hero__visual" aria-hidden="true" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="journal-hero__img-wrap">
+            <img
+              src="assets/images/salon-image-11.webp"
+              alt="Stylist and guest in the studio"
+              class="journal-hero__img journal-hero__img--main" data-aos="zoom-in" data-aos-delay="320">
+            <img
+              src="assets/images/salon-image-12.webp"
+              alt="Scalp treatment close-up"
+              class="journal-hero__img journal-hero__img--float" data-aos="zoom-in" data-aos-delay="480">
+          </div>
+
+          <!-- Floating accent chips -->
+          <div class="journal-hero__chip journal-hero__chip--a" data-aos="fade-up" data-aos-delay="580">
+            <i class="fa-solid fa-book-open"></i>
+            <span>7 stories</span>
+          </div>
+          <div class="journal-hero__chip journal-hero__chip--b" data-aos="fade-up" data-aos-delay="660">
+            <i class="fa-regular fa-clock"></i>
+            <span>5 min avg read</span>
+          </div>
+
+          <!-- Decorative blob -->
+          <div class="journal-hero__blob" aria-hidden="true" data-aos="zoom-in" data-aos-delay="250"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 2. FEATURED STORY ============ -->
+    <section class="feature-post" id="featurePost">
+      <a class="feature-post__card" href="#" data-aos="fade-up">
+        <div class="feature-post__media">
+          <img src="assets/images/salon-image-4.webp"
+            alt="Stylist and guest sharing a quiet moment in the studio">
+          <span class="feature-post__tag">Editor's pick</span>
+        </div>
+        <div class="feature-post__body">
+          <span class="feature-post__cat">Studio Life</span>
+          <h2>Why we stopped rushing: a year of slow beauty at Stackly.</h2>
+          <p>Twelve months ago we cut our daily bookings by a third. Here's what happened to the work, the guests, and
+            the chairs themselves.</p>
+          <div class="feature-post__meta">
+            <span>Stackly Team</span>
+            <span class="feature-post__dot"></span>
+            <span>Sept 2, 2026</span>
+            <span class="feature-post__dot"></span>
+            <span>8 min read</span>
+          </div>
+          <span class="feature-post__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ============ 3. ARTICLES- FILTERABLE GRID ============ -->
+    <section class="journal-grid" id="journalGrid">
+      <div class="journal-grid__head" data-aos="fade-up">
+        <p class="section-eyebrow">Latest notes</p>
+        <h2 class="section-title">Read a little,<br>try a little.</h2>
+      </div>
+
+      <div class="journal-filter" id="journalFilter" role="tablist" aria-label="Filter articles by category">
+        <button class="journal-filter__btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="journal-filter__btn" data-filter="hair-care" role="tab" aria-selected="false">Hair Care</button>
+        <button class="journal-filter__btn" data-filter="skin-rituals" role="tab" aria-selected="false">Skin
+          Rituals</button>
+        <button class="journal-filter__btn" data-filter="nail-art" role="tab" aria-selected="false">Nail Art</button>
+        <button class="journal-filter__btn" data-filter="seasonal-guides" role="tab" aria-selected="false">Seasonal
+          Guides</button>
+        <button class="journal-filter__btn" data-filter="studio-life" role="tab" aria-selected="false">Studio
+          Life</button>
+      </div>
+
+      <div class="journal-cards" id="journalCards">
+
+        <a class="journal-card" href="404.html" data-category="hair-care" data-aos="fade-up" data-aos-delay="0">
+          <div class="journal-card__media">
+            <img src="assets/images/salon-image-14.webp"
+              alt="Close-up of hands massaging a scalp">
+          </div>
+          <span class="journal-card__cat">Hair Care</span>
+          <h3>The five-minute scalp ritual that changed my hair.</h3>
+          <p>A stylist-approved routine you can do in the shower, twice a week, with things already in your bathroom.
+          </p>
+          <div class="journal-card__footer">
+            <span class="journal-card__meta">Rhea Kapoor · 4 min read</span>
+            <span class="journal-card__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a class="journal-card" href="404.html" data-category="seasonal-guides" data-aos="fade-up" data-aos-delay="80">
+          <div class="journal-card__media">
+            <img src="assets/images/parlour.webp"
+              alt="Guest receiving a facial treatment">
+          </div>
+          <span class="journal-card__cat">Seasonal Guides</span>
+          <h3>Reading your skin before the season changes.</h3>
+          <p>The three questions we ask every guest before recommending a single product- ask yourself the same.</p>
+          <div class="journal-card__footer">
+            <span class="journal-card__meta">Farah Sheikh · 6 min read</span>
+            <span class="journal-card__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a class="journal-card" href="404.html" data-category="hair-care" data-aos="fade-up" data-aos-delay="160">
+          <div class="journal-card__media">
+            <img src="assets/images/salon-image-2.webp"
+              alt="Colourist mixing hair colour">
+          </div>
+          <span class="journal-card__cat">Hair Care</span>
+          <h3>What "warm" actually means when you ask for copper hair.</h3>
+          <p>Colour language is confusing on purpose. Here's how our colourist translates it into something she can mix.
+          </p>
+          <div class="journal-card__footer">
+            <span class="journal-card__meta">Noor Iyer · 5 min read</span>
+            <span class="journal-card__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a class="journal-card" href="404.html" data-category="nail-art" data-aos="fade-up" data-aos-delay="240">
+          <div class="journal-card__media">
+            <img src="assets/images/nail.webp"
+              alt="Assorted nail polish shades">
+          </div>
+          <span class="journal-card__cat">Nail Art</span>
+          <h3>Twelve shades we're loving this monsoon.</h3>
+          <p>Our seasonal palette, and the two colours that guests keep asking to see again once they're on.</p>
+          <div class="journal-card__footer">
+            <span class="journal-card__meta">Sana Merchant · 3 min read</span>
+            <span class="journal-card__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a class="journal-card" href="404.html" data-category="studio-life" data-aos="fade-up" data-aos-delay="320">
+          <div class="journal-card__media">
+            <img src="assets/images/salon-image-4.webp"
+              alt="Interior of a calm beauty studio">
+          </div>
+          <span class="journal-card__cat">Studio Life</span>
+          <h3>Inside the Stackly Hour: a ritual, not a rush.</h3>
+          <p>What actually happens during our ninety-minute signature service, chair by chair, step by step.</p>
+          <div class="journal-card__footer">
+            <span class="journal-card__meta">Stackly Team · 7 min read</span>
+            <span class="journal-card__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a class="journal-card" href="404.html" data-category="seasonal-guides" data-aos="fade-up" data-aos-delay="400">
+          <div class="journal-card__media">
+            <img src="assets/images/salon-image-25.webp"
+              alt="Bride having her hair styled before a wedding">
+          </div>
+          <span class="journal-card__cat">Seasonal Guides</span>
+          <h3>Bridal trials: when to book and what to bring.</h3>
+          <p>A realistic timeline for trials, plus the three photos worth bringing to your first consultation.</p>
+          <div class="journal-card__footer">
+            <span class="journal-card__meta">Rhea Kapoor · 5 min read</span>
+            <span class="journal-card__read-more">Read more <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="journal-grid__empty" id="journalEmpty">No notes in this topic yet- check back soon.</p>
+    </section>
+
+    <!-- ============ 4. TRENDING NOW ============ -->
+    <section class="trending" id="trending">
+
+      <div class="trending__head" data-aos="fade-up">
+        <div class="trending__head-left">
+          <p class="section-eyebrow section-eyebrow--light">Most read</p>
+          <h2 class="section-title trending__title">What guests are<br>reading right now.</h2>
+        </div>
+        <p class="trending__count">04 stories</p>
+      </div>
+
+      <ol class="trending__list" id="trendingTrack">
+
+        <li class="trending-row" data-aos="fade-up" data-aos-delay="0" data-aos-duration="700">
+          <a href="404.html" class="trending-row__link">
+            <span class="trending-row__num">01</span>
+            <div class="trending-row__body">
+              <span class="trending-row__cat">Hair Care</span>
+              <h3 class="trending-row__title">The five-minute scalp ritual that changed my hair.</h3>
+            </div>
+            <span class="trending-row__meta">4 min read</span>
+            <span class="trending-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </li>
+
+        <li class="trending-row" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700">
+          <a href="404.html" class="trending-row__link">
+            <span class="trending-row__num">02</span>
+            <div class="trending-row__body">
+              <span class="trending-row__cat">Seasonal Guides</span>
+              <h3 class="trending-row__title">Reading your skin before the season changes.</h3>
+            </div>
+            <span class="trending-row__meta">6 min read</span>
+            <span class="trending-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </li>
+
+        <li class="trending-row" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
+          <a href="404.html" class="trending-row__link">
+            <span class="trending-row__num">03</span>
+            <div class="trending-row__body">
+              <span class="trending-row__cat">Seasonal Guides</span>
+              <h3 class="trending-row__title">Bridal trials: when to book and what to bring.</h3>
+            </div>
+            <span class="trending-row__meta">5 min read</span>
+            <span class="trending-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </li>
+
+        <li class="trending-row" data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">
+          <a href="404.html" class="trending-row__link">
+            <span class="trending-row__num">04</span>
+            <div class="trending-row__body">
+              <span class="trending-row__cat">Studio Life</span>
+              <h3 class="trending-row__title">Inside the Stackly Hour: a ritual, not a rush.</h3>
+            </div>
+            <span class="trending-row__meta">7 min read</span>
+            <span class="trending-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- ============ 5. TOPICS / TAG CLOUD ============ -->
+    <section class="topics" id="topics">
+
+      <!-- Left: editorial heading -->
+      <div class="topics__left" data-aos="fade-right" data-aos-duration="800">
+        <div class="topics__left-inner">
+          <p class="section-eyebrow topics__eyebrow">Browse by topic</p>
+          <h2 class="topics__title">Find exactly<br>what <em>moves you.</em></h2>
+          <p class="topics__desc">Six distinct areas, one honest journal- pick a thread and follow it.</p>
+          <span class="topics__total" aria-hidden="true">06</span>
+        </div>
+      </div>
+
+      <!-- Right: topic rows -->
+      <div class="topics__right">
+        <ol class="topics__list" id="topicsCloud">
+
+          <li class="topic-row" data-aos="fade-left" data-aos-delay="0" data-aos-duration="700">
+            <a href="404.html" class="topic-row__btn" data-filter="hair-care">
+              <span class="topic-row__icon"><i class="fa-solid fa-scissors"></i></span>
+              <span class="topic-row__label">Hair Care</span>
+              <span class="topic-row__count">3 stories</span>
+              <span class="topic-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <li class="topic-row" data-aos="fade-left" data-aos-delay="80" data-aos-duration="700">
+            <a href="404.html" class="topic-row__btn" data-filter="skin-rituals">
+              <span class="topic-row__icon"><i class="fa-solid fa-leaf"></i></span>
+              <span class="topic-row__label">Skin Rituals</span>
+              <span class="topic-row__count">2 stories</span>
+              <span class="topic-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <li class="topic-row" data-aos="fade-left" data-aos-delay="160" data-aos-duration="700">
+            <a href="404.html" class="topic-row__btn" data-filter="nail-art">
+              <span class="topic-row__icon"><i class="fa-solid fa-paint-brush"></i></span>
+              <span class="topic-row__label">Nail Art</span>
+              <span class="topic-row__count">1 story</span>
+              <span class="topic-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <li class="topic-row" data-aos="fade-left" data-aos-delay="240" data-aos-duration="700">
+            <a href="404.html" class="topic-row__btn" data-filter="seasonal-guides">
+              <span class="topic-row__icon"><i class="fa-solid fa-sun"></i></span>
+              <span class="topic-row__label">Seasonal Guides</span>
+              <span class="topic-row__count">2 stories</span>
+              <span class="topic-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <li class="topic-row" data-aos="fade-left" data-aos-delay="320" data-aos-duration="700">
+            <a href="404.html" class="topic-row__btn" data-filter="studio-life">
+              <span class="topic-row__icon"><i class="fa-solid fa-spa"></i></span>
+              <span class="topic-row__label">Studio Life</span>
+              <span class="topic-row__count">2 stories</span>
+              <span class="topic-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+          <li class="topic-row" data-aos="fade-left" data-aos-delay="400" data-aos-duration="700">
+            <a href="404.html" class="topic-row__btn" data-filter="all">
+              <span class="topic-row__icon"><i class="fa-solid fa-book-open"></i></span>
+              <span class="topic-row__label">All Stories</span>
+              <span class="topic-row__count">7 stories</span>
+              <span class="topic-row__arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+          </li>
+
+        </ol>
+      </div>
+
+    </section>
+
+    <!-- ============ 6. EDITOR'S NOTE ============ -->
+    <section class="editors-note" id="editorsNote">
+
+      <!-- Running ribbon (decorative) -->
+      <div class="editors-note__ribbon" aria-hidden="true">
+        <div class="editors-note__ribbon-track">
+          <span>Issue 06</span><i>✦</i><span>Scalp care</span><i>✦</i><span>Slow beauty</span><i>✦</i>
+          <span>Colour, translated</span><i>✦</i><span>Studio life</span><i>✦</i><span>Seasonal skin</span><i>✦</i>
+          <span>Issue 06</span><i>✦</i><span>Scalp care</span><i>✦</i><span>Slow beauty</span><i>✦</i>
+          <span>Colour, translated</span><i>✦</i><span>Studio life</span><i>✦</i><span>Seasonal skin</span><i>✦</i>
+        </div>
+      </div>
+
+      <div class="editors-note__inner">
+
+        <!-- Vertical rail: section label + issue number -->
+        <div class="editors-note__rail" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+          <span class="editors-note__rail-label">Editor's note</span>
+          <span class="editors-note__rail-line" aria-hidden="true"></span>
+          <span class="editors-note__rail-no">No. 06</span>
+        </div>
+
+        <!-- The letter -->
+        <div class="editors-note__body">
+          <figure class="editors-note__figure" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <span class="editors-note__mark" aria-hidden="true">&ldquo;</span>
+
+            <p class="section-eyebrow editors-note__eyebrow">From the editor</p>
+
+            <blockquote class="editors-note__quote">
+              We write this journal the way we work in the chair- slowly, and only when there's
+              something worth saying. Everything guests ask between the rinse and the blow-dry
+              ends up here instead.
+            </blockquote>
+
+            <figcaption class="editors-note__by">
+              <span class="editors-note__name">Rhea Kapoor</span>
+              <span class="editors-note__role">Lead stylist, editor of the Journal</span>
+            </figcaption>
+          </figure>
+
+          <ul class="editors-note__facts" data-aos="fade-up" data-aos-duration="700" data-aos-delay="350">
+            <li><strong>06</strong><span>current issue</span></li>
+            <li><strong>7</strong><span>stories published</span></li>
+            <li><strong>Thu</strong><span>new notes land</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 7. FINAL CTA ============ -->
+    <section class="journal-cta" id="journalCta">
+
+      <!-- Decorative elements -->
+      <div class="journal-cta__bg-text" aria-hidden="true">Chair</div>
+      <div class="journal-cta__orb journal-cta__orb--a" aria-hidden="true"></div>
+      <div class="journal-cta__orb journal-cta__orb--b" aria-hidden="true"></div>
+
+      <div class="journal-cta__inner">
+
+        <!-- Left: editorial heading -->
+        <div class="journal-cta__left" data-aos="fade-right" data-aos-duration="800" data-aos-delay="100">
+          <p class="journal-cta__eyebrow">
+            <span class="journal-cta__eyebrow-line"></span>
+            Enjoyed the read?
+          </p>
+          <h2 class="journal-cta__title">
+            Come try it<br>
+            <em>in the chair.</em>
+          </h2>
+          <p class="journal-cta__desc">Words only go so far- our stylists take it from there. Six days a week, most same-day slots open up by 11am.</p>
+        </div>
+
+        <!-- Right: actions -->
+        <div class="journal-cta__right" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+
+          <div class="journal-cta__action-block">
+            <a href="contact.html" class="journal-cta__action-btn journal-cta__action-btn--primary" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+              <span class="journal-cta__action-icon">
+                <i class="fa-solid fa-calendar-check"></i>
+              </span>
+              <span class="journal-cta__action-text">
+                <strong>Reserve a chair</strong>
+                <small>Book your visit online</small>
+              </span>
+              <i class="fa-solid fa-arrow-right journal-cta__action-arrow"></i>
+            </a>
+
+            <a href="404.html" class="journal-cta__action-btn journal-cta__action-btn--secondary" data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">
+              <span class="journal-cta__action-icon">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <span class="journal-cta__action-text">
+                <strong>Call the studio</strong>
+                <small>+91 98765 43210</small>
+              </span>
+              <i class="fa-solid fa-arrow-right journal-cta__action-arrow"></i>
+            </a>
+
+            <a href="404.html" target="_blank" rel="noopener" class="journal-cta__action-btn journal-cta__action-btn--secondary" data-aos="fade-up" data-aos-delay="500" data-aos-duration="600">
+              <span class="journal-cta__action-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </span>
+              <span class="journal-cta__action-text">
+                <strong>WhatsApp us</strong>
+                <small>Quick questions welcome</small>
+              </span>
+              <i class="fa-solid fa-arrow-right journal-cta__action-arrow"></i>
+            </a>
+          </div>
+
+          <div class="journal-cta__social" data-aos="fade-up" data-aos-delay="600" data-aos-duration="600">
+            <span>Follow the journal</span>
+            <div class="journal-cta__social-links">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i> Pinterest</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="footer__brand" data-aos="fade-up" data-aos-delay="0">
+        <a href="index.html" class="nav__logo footer__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="nav__logo-img"></a>
+        <p>A beauty house for hair, skin, and slow mornings. Open six days, by appointment.</p>
+        <div class="footer__brand-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col" data-aos="fade-up" data-aos-delay="90">
+        <h4>Quick Links</h4>
+        <p><a href="index.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Home</a></p>
+        <p><a href="about.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;About</a></p>
+        <p><a href="services.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Services</a></p>
+        <p><a href="blog.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Blog</a></p>
+        <p><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Contact</a></p>
+      </div>
+
+      <div class="footer__col" data-aos="fade-up" data-aos-delay="180">
+        <h4>Contact</h4>
+        <p><a href="404.html"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 9876543210</a></p>
+        <p><a href="404.html"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;info@thestackly.com</a></p>
+        <p><a href="404.html"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Salem, Tamil Nadu, India</a></p>
+      </div>
+
+      <div class="footer__col footer__col--newsletter" data-aos="fade-up" data-aos-delay="270">
+        <h4>Stay in the loop</h4>
+        <p>One email a month, mostly about scalp care.</p>
+        <form class="footer__form" id="newsletterForm" action="404.html" method="get" novalidate>
+          <div class="footer__form-row">
+            <input type="email" id="newsletterEmail" name="email" placeholder="you@email.com" autocomplete="email">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <p class="footer__error" id="newsletterError" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Stackly Beauty House. All rights reserved.</span>
+      <div class="footer__social">
+        <a href="404.html">Terms & Conditions</a>
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Return Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="index.html" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/blog.js"></script>
+</body>
+
+</html>

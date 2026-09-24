@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly- Botanical Beauty House</title>
+  <meta name="description"
+    content="Stackly is a modern beauty house blending botanical ritual with precise craft- hair, skin, and nail artistry.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="home">
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__mark">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader__logo">
+    </div>
+    <div class="preloader__bar"><span id="preloaderProgress"></span></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR DOT (decorative, desktop only) ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="siteNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="nav__logo-img"></a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link is-active" aria-current="page">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+
+      <a href="login.html" class="nav__cta">Login</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link is-active" aria-current="page">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="contact.html" class="mobile-menu__link">Contact</a>
+
+    <a href="login.html" class="mobile-menu__book">Login</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hh" id="hero">
+      <div class="hh__inner">
+        <figure class="hh__arch hh__arch--l">
+          <img src="assets/images/salon-image-19.webp" alt="Guest receiving a botanical facial treatment">
+          <figcaption class="hh__tag">Skin Atelier</figcaption>
+        </figure>
+
+        <div class="hh__text">
+          <p class="hh__eyebrow">A beauty house, reimagined</p>
+          <h1 class="hh__title">
+            <span class="hh__title-line">Where craft</span>
+            <span class="hh__title-line">meets <em>calm.</em></span>
+          </h1>
+          <p class="hh__desc">Stackly pairs precise hair and skin artistry with slow botanical ritual- nineteen
+            chairs, one philosophy: beauty should feel like breathing out.</p>
+          <div class="hh__actions">
+            <a href="404.html" class="btn btn--primary">Reserve a chair</a>
+            <a href="about.html" class="btn btn--ghost">About Us <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <figure class="hh__arch hh__arch--r">
+          <img src="assets/images/salon-image-18.webp" alt="Stylist finishing a client's haircut at Stackly">
+          <figcaption class="hh__tag">Hair Studio</figcaption>
+          <a href="404.html" class="hh__seal" aria-label="Reserve a chair">
+            <svg viewBox="0 0 120 120" class="hh__seal-ring" aria-hidden="true">
+              <defs><path id="hhCircle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+              <text><textPath href="#hhCircle" textLength="286" lengthAdjust="spacing">Reserve a chair - Stackly - Est. 2014 -</textPath></text>
+            </svg>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </figure>
+      </div>
+
+      <div class="hh__strip">
+        <div class="hh__stat"><strong>4.9</strong><span>guest rating, 2,300+ visits</span></div>
+        <div class="hh__stat"><strong>12yrs</strong><span>crafting the Stackly ritual</span></div>
+        <div class="hh__stat"><strong>19</strong><span>chairs, one unhurried pace</span></div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PHILOSOPHY / ABOUT ============ -->
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy__visual">
+        <img src="assets/images/studio.webp"
+          alt="Interior of the Stackly salon with round mirrors and brick walls">
+        <div class="philosophy__frame"></div>
+      </div>
+      <div class="philosophy__content">
+        <p class="section-eyebrow">Our philosophy</p>
+        <h2 class="section-title">Three principles guide<br>every appointment we keep.</h2>
+        <div class="philosophy__list">
+          <div class="philosophy__item" data-aos="fade-up" data-aos-delay="0">
+            <span class="philosophy__index">I.</span>
+            <div>
+              <h3>Listen first</h3>
+              <p>Every visit opens with an unhurried consultation- your hair's history, your skin's mood, your week
+                ahead.</p>
+            </div>
+          </div>
+          <div class="philosophy__item" data-aos="fade-up" data-aos-delay="100">
+            <span class="philosophy__index">II.</span>
+            <div>
+              <h3>Work with restraint</h3>
+              <p>Fewer chemicals, fewer steps, better outcomes. We use only what your hair and skin truly ask for.</p>
+            </div>
+          </div>
+          <div class="philosophy__item" data-aos="fade-up" data-aos-delay="200">
+            <span class="philosophy__index">III.</span>
+            <div>
+              <h3>Leave you steadier</h3>
+              <p>A good appointment changes more than your reflection- you should leave calmer than you arrived.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="services__head">
+        <div class="services__head-main">
+          <p class="section-eyebrow">What we do</p>
+          <h2 class="section-title">Six disciplines,<br>one unhurried standard.</h2>
+        </div>
+        <div class="services__head-aside">
+          <p>Six rooms, one clock. Every booking is a single, unshared block of time- no double-bookings, no
+            rushing the rinse.</p>
+          <a class="services__link" href="services.html">See the full price list <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="services__list">
+        <a class="svc-line" href="404.html">
+          <span class="svc-line__num">01</span>
+          <div class="svc-line__media">
+            <img src="assets/images/salon-image-21.webp"
+              alt="Hairstylist blow-drying a client's hair">
+          </div>
+          <div class="svc-line__body">
+            <h3>Hair Studio</h3>
+            <p class="svc-line__copy">Cut, color, and restorative treatments built around your hair's natural fall.</p>
+            <div class="svc-line__foot">
+              <div class="svc-line__tags">
+                <span class="svc-line__tag">Cuts</span>
+                <span class="svc-line__tag">Colour</span>
+                <span class="svc-line__tag">Treatments</span>
+              </div>
+              <div class="svc-line__buy">
+                <span class="svc-line__price">from ₹1,800</span>
+                <span class="svc-line__cta">Book this</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="svc-line" href="404.html">
+          <span class="svc-line__num">02</span>
+          <div class="svc-line__media">
+            <img src="assets/images/salon-image-22.webp"
+              alt="Guest receiving a facial spa treatment">
+          </div>
+          <div class="svc-line__body">
+            <h3>Skin Atelier</h3>
+            <p class="svc-line__copy">Facials formulated for climate, age, and the season you're actually in.</p>
+            <div class="svc-line__foot">
+              <div class="svc-line__tags">
+                <span class="svc-line__tag">Facials</span>
+                <span class="svc-line__tag">Peels</span>
+                <span class="svc-line__tag">Clean-ups</span>
+              </div>
+              <div class="svc-line__buy">
+                <span class="svc-line__price">from ₹2,400</span>
+                <span class="svc-line__cta">Book this <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="svc-line" href="404.html">
+          <span class="svc-line__num">03</span>
+          <div class="svc-line__media">
+            <img src="assets/images/salon-image-23.webp"
+              alt="Nail technician working on a client's manicure">
+          </div>
+          <div class="svc-line__body">
+            <h3>Nail Bar</h3>
+            <p class="svc-line__copy">Manicures and pedicures with a twelve-shade seasonal palette.</p>
+            <div class="svc-line__foot">
+              <div class="svc-line__tags">
+                <span class="svc-line__tag">Manicure</span>
+                <span class="svc-line__tag">Pedicure</span>
+                <span class="svc-line__tag">Nail art</span>
+              </div>
+              <div class="svc-line__buy">
+                <span class="svc-line__price">from ₹900</span>
+                <span class="svc-line__cta">Book this <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="svc-line" href="404.html">
+          <span class="svc-line__num">04</span>
+          <div class="svc-line__media">
+            <img src="assets/images/lashes.webp"
+              alt="Technician applying eyelash extensions">
+          </div>
+          <div class="svc-line__body">
+            <h3>Lash &amp; Brow</h3>
+            <p class="svc-line__copy">Extensions, laminations, and tints shaped to your face, not a template.</p>
+            <div class="svc-line__foot">
+              <div class="svc-line__tags">
+                <span class="svc-line__tag">Extensions</span>
+                <span class="svc-line__tag">Lamination</span>
+                <span class="svc-line__tag">Tints</span>
+              </div>
+              <div class="svc-line__buy">
+                <span class="svc-line__price">from ₹1,200</span>
+                <span class="svc-line__cta">Book this <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="svc-line" href="404.html">
+          <span class="svc-line__num">05</span>
+          <div class="svc-line__media">
+            <img src="assets/images/salon-image-25.webp"
+              alt="Guest relaxing during a spa treatment">
+          </div>
+          <div class="svc-line__body">
+            <h3>Body Rituals</h3>
+            <p class="svc-line__copy">Scrubs and massage designed to slow your whole day down, not just your skin.</p>
+            <div class="svc-line__foot">
+              <div class="svc-line__tags">
+                <span class="svc-line__tag">Scrubs</span>
+                <span class="svc-line__tag">Massage</span>
+                <span class="svc-line__tag">Wraps</span>
+              </div>
+              <div class="svc-line__buy">
+                <span class="svc-line__price">from ₹2,100</span>
+                <span class="svc-line__cta">Book this <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a class="svc-line" href="404.html">
+          <span class="svc-line__num">06</span>
+          <div class="svc-line__media">
+            <img src="assets/images/salon-image-1.webp"
+              alt="Assorted beauty and makeup products">
+          </div>
+          <div class="svc-line__body">
+            <h3>Makeup Studio</h3>
+            <p class="svc-line__copy">Bridal, editorial, and everyday makeup- always trial-fitted, never rushed.</p>
+            <div class="svc-line__foot">
+              <div class="svc-line__tags">
+                <span class="svc-line__tag">Bridal</span>
+                <span class="svc-line__tag">Editorial</span>
+                <span class="svc-line__tag">Trials</span>
+              </div>
+              <div class="svc-line__buy">
+                <span class="svc-line__price">from ₹2,800</span>
+                <span class="svc-line__cta">Book this <i class="fa-solid fa-arrow-right"></i></span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ 4. SIGNATURE RITUAL (pinned scroll) ============ -->
+    <section class="ritual" id="ritual">
+      <div class="ritual__pin">
+        <div class="ritual__head" data-aos="fade-up" data-aos-delay="0">
+          <p class="section-eyebrow section-eyebrow--light">The signature ritual</p>
+          <h2 class="ritual__title">The Stackly Hour</h2>
+          <p class="ritual__desc">Ninety minutes, three stages, one chair. Our most booked appointment- scroll to walk
+            through it.</p>
+        </div>
+
+        <div class="ritual__track" id="ritualTrack">
+          <div class="ritual__panel">
+            <span class="ritual__step">01 / Arrive</span>
+            <h3>A slow ten minutes</h3>
+            <p>Warm towel, scalp reading, and a walnut-wood tray of jasmine tea while we plan the hour ahead.</p>
+          </div>
+          <div class="ritual__panel">
+            <span class="ritual__step">02 / Shape</span>
+            <h3>Cut &amp; colour</h3>
+            <p>Dry-cut precision on wet-cut structure, then a botanical gloss matched to your undertone.</p>
+          </div>
+          <div class="ritual__panel">
+            <span class="ritual__step">03 / Finish</span>
+            <h3>Scalp massage</h3>
+            <p>Twelve minutes of pressure-point massage before the final blow-out and mirror reveal.</p>
+          </div>
+          <div class="ritual__panel">
+            <span class="ritual__step">04 / Leave</span>
+            <h3>Steadier than you came</h3>
+            <p>A take-home vial of your custom gloss, and a standing invitation back in six weeks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. STATS ============ -->
+    <section class="stats" id="stats">
+      <div class="stats__grid">
+        <div class="stats__item">
+          <span class="stats__num" data-count="12">0</span><span class="stats__suffix">yrs</span>
+          <p>Open in the neighbourhood</p>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num" data-count="19">0</span>
+          <p>Chairs across hair &amp; skin</p>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num" data-count="2300">0</span><span class="stats__suffix">+</span>
+          <p>Appointments this year</p>
+        </div>
+        <div class="stats__item">
+          <span class="stats__num" data-count="94">0</span><span class="stats__suffix">%</span>
+          <p>Guests who rebook within 8 weeks</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. GALLERY (continuous auto-scroll) ============ -->
+    <section class="gallery" id="gallery">
+      <div class="gallery__head">
+        <p class="section-eyebrow" data-aos="fade-up" data-aos-delay="0">Inside Stackly</p>
+        <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">A studio built<br>for slow mornings.</h2>
+      </div>
+      <div class="gallery__track" id="galleryTrack">
+        <figure class="gallery__item">
+          <img src="assets/images/hair-color.webp"
+            alt="Black salon chairs facing circular mirrors on a dark wall">
+          <figcaption>The colour bar</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall">
+          <img src="assets/images/salon-image-28.webp"
+            alt="Salon chairs facing a long white counter with a mirror">
+          <figcaption>Styling counter</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/studio.webp"
+            alt="Pink and brown makeup brush set">
+          <figcaption>Makeup studio</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall">
+          <img src="assets/images/tools.webp"
+            alt="Hands holding hairdressing tools">
+          <figcaption>The tool wall</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/salon-image-29.webp"
+            alt="Hand holding a hair curler">
+          <figcaption>Finishing station</figcaption>
+        </figure>
+        <figure class="gallery__item">
+          <img src="assets/images/salon-image-14.webp"
+            alt="Guest portrait with closed eyes through glass">
+          <figcaption>A quiet moment</figcaption>
+        </figure>
+
+        <!-- Duplicate set- hidden from screen readers, powers the seamless loop -->
+        <figure class="gallery__item" aria-hidden="true">
+          <img src="assets/images/hair-color.webp"
+            alt="Black salon chairs facing circular mirrors on a dark wall">
+          <figcaption>The colour bar</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall" aria-hidden="true">
+          <img src="assets/images/salon-image-28.webp"
+            alt="Salon chairs facing a long white counter with a mirror">
+          <figcaption>Styling counter</figcaption>
+        </figure>
+        <figure class="gallery__item" aria-hidden="true">
+          <img src="assets/images/studio.webp"
+            alt="Pink and brown makeup brush set">
+          <figcaption>Makeup studio</figcaption>
+        </figure>
+        <figure class="gallery__item gallery__item--tall" aria-hidden="true">
+          <img src="assets/images/tools.webp"
+            alt="Hands holding hairdressing tools">
+          <figcaption>The tool wall</figcaption>
+        </figure>
+        <figure class="gallery__item" aria-hidden="true">
+          <img src="assets/images/salon-image-29.webp"
+            alt="Hand holding a hair curler">
+          <figcaption>Finishing station</figcaption>
+        </figure>
+        <figure class="gallery__item" aria-hidden="true">
+          <img src="assets/images/salon-image-14.webp"
+            alt="Guest portrait with closed eyes through glass">
+          <figcaption>A quiet moment</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 7. TESTIMONIALS ============ -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials__inner">
+
+        <!-- Left accent column -->
+        <aside class="testimonials__aside" data-aos="fade-right">
+          <p class="section-eyebrow">Guest notes</p>
+          <div class="testimonials__line"></div>
+          <div class="testimonials__dots" id="testiDots">
+            <button class="testi-dot is-active" data-index="0" aria-label="Review 1"></button>
+            <button class="testi-dot" data-index="1" aria-label="Review 2"></button>
+            <button class="testi-dot" data-index="2" aria-label="Review 3"></button>
+            <button class="testi-dot" data-index="3" aria-label="Review 4"></button>
+          </div>
+        </aside>
+
+        <!-- Main quote stage -->
+        <div class="testimonials__stage" data-aos="fade-up" data-aos-delay="100">
+          <span class="testimonials__bigquote" aria-hidden="true">"</span>
+
+          <div class="testimonials__slides" id="testiSlides">
+
+            <div class="testi-slide is-active" data-index="0">
+              <blockquote class="testi-slide__quote">
+                The scalp massage alone is worth the visit. I've stopped going anywhere
+                else for colour - they actually listen to what "warm" means for my skin.
+              </blockquote>
+              <footer class="testi-slide__footer">
+                <div class="testi-slide__avatar">MK</div>
+                <div>
+                  <p class="testi-slide__name">Meera K.</p>
+                  <p class="testi-slide__since">Guest since 2021 &nbsp;-&nbsp; Hair Studio</p>
+                </div>
+                <div class="testi-slide__stars" aria-label="5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </footer>
+            </div>
+
+            <div class="testi-slide" data-index="1">
+              <blockquote class="testi-slide__quote">
+                Booked the Stackly Hour before a wedding and it became my monthly reset.
+                Precise cuts, unrushed pace, and the tea is genuinely good.
+              </blockquote>
+              <footer class="testi-slide__footer">
+                <div class="testi-slide__avatar">DR</div>
+                <div>
+                  <p class="testi-slide__name">Divya R.</p>
+                  <p class="testi-slide__since">Guest since 2022 &nbsp;-&nbsp; Stackly Hour</p>
+                </div>
+                <div class="testi-slide__stars" aria-label="5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </footer>
+            </div>
+
+            <div class="testi-slide" data-index="2">
+              <blockquote class="testi-slide__quote">
+                My brows have never held shape this well. Small studio, huge attention to
+                detail - you can tell nobody is rushing to the next chair.
+              </blockquote>
+              <footer class="testi-slide__footer">
+                <div class="testi-slide__avatar">AF</div>
+                <div>
+                  <p class="testi-slide__name">Ayesha F.</p>
+                  <p class="testi-slide__since">Guest since 2023 &nbsp;-&nbsp; Brow Studio</p>
+                </div>
+                <div class="testi-slide__stars" aria-label="5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </footer>
+            </div>
+
+            <div class="testi-slide" data-index="3">
+              <blockquote class="testi-slide__quote">
+                First facial that didn't leave my skin irritated for days. They asked about
+                the weather before they asked about my skin type - that's how I knew.
+              </blockquote>
+              <footer class="testi-slide__footer">
+                <div class="testi-slide__avatar">NS</div>
+                <div>
+                  <p class="testi-slide__name">Neha S.</p>
+                  <p class="testi-slide__since">Guest since 2020 &nbsp;-&nbsp; Skin Atelier</p>
+                </div>
+                <div class="testi-slide__stars" aria-label="5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+              </footer>
+            </div>
+
+          </div><!-- /.testimonials__slides -->
+
+          <!-- Arrow nav -->
+          <div class="testimonials__nav">
+            <button id="testiPrev" aria-label="Previous review">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M11 14L6 9l5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button id="testiNext" aria-label="Next review">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+
+        </div><!-- /.testimonials__stage -->
+
+        <!-- Right decorative pull -->
+        <div class="testimonials__deco" aria-hidden="true" data-aos="fade-left" data-aos-delay="200">
+          <h2 class="testimonials__vertical-title">Told in their words,<br>not ours.</h2>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 8. STYLISTS / TEAM ============ -->
+    <section class="team" id="stylists">
+      <div class="team__head">
+        <p class="section-eyebrow">The chairs</p>
+        <h2 class="section-title">Four hands you'll<br>come to trust.</h2>
+      </div>
+
+      <div class="team__list" id="teamList">
+
+        <div class="team-row" data-index="0" data-aos="fade-up" data-aos-delay="0">
+          <button class="team-row__trigger" aria-expanded="false" aria-controls="team-panel-0">
+            <span class="team-row__num">01</span>
+            <span class="team-row__name">Rhea Kapoor</span>
+            <span class="team-row__role">Creative Director, Hair</span>
+            <span class="team-row__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="team-row__panel" id="team-panel-0" hidden>
+            <div class="team-row__inner">
+              <div class="team-row__img-wrap">
+                <img src="assets/images/people-1.webp"
+                  alt="Rhea Kapoor- Creative Director, Hair">
+              </div>
+              <div class="team-row__detail">
+                <p class="team-row__bio">Twelve years of dry-cut precision. Rhea reads hair texture like a sentence- every appointment opens with a thorough consultation and closes with a cut built to last eight weeks.</p>
+                <ul class="team-row__tags">
+                  <li>Dry-cut</li><li>Balayage</li><li>Hair Rituals</li>
+                </ul>
+                <a href="404.html" class="team-row__book">Book with Rhea <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-row" data-index="1" data-aos="fade-up" data-aos-delay="80">
+          <button class="team-row__trigger" aria-expanded="false" aria-controls="team-panel-1">
+            <span class="team-row__num">02</span>
+            <span class="team-row__name">Farah Sheikh</span>
+            <span class="team-row__role">Lead Esthetician</span>
+            <span class="team-row__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="team-row__panel" id="team-panel-1" hidden>
+            <div class="team-row__inner">
+              <div class="team-row__img-wrap">
+                <img src="assets/images/people-4.webp"
+                  alt="Farah Sheikh- Lead Esthetician">
+              </div>
+              <div class="team-row__detail">
+                <p class="team-row__bio">Botanical skin rituals tailored by season, climate, and your skin's current mood. Farah trained in Seoul and Jaipur and believes the best facial starts with listening, not a menu.</p>
+                <ul class="team-row__tags">
+                  <li>Botanical Facials</li><li>Chemical Peels</li><li>Skin Mapping</li>
+                </ul>
+                <a href="404.html" class="team-row__book">Book with Farah <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-row" data-index="2" data-aos="fade-up" data-aos-delay="160">
+          <button class="team-row__trigger" aria-expanded="false" aria-controls="team-panel-2">
+            <span class="team-row__num">03</span>
+            <span class="team-row__name">Noor Iyer</span>
+            <span class="team-row__role">Senior Colourist</span>
+            <span class="team-row__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="team-row__panel" id="team-panel-2" hidden>
+            <div class="team-row__inner">
+              <div class="team-row__img-wrap">
+                <img src="assets/images/people-3.webp"
+                  alt="Noor Iyer- Senior Colourist">
+              </div>
+              <div class="team-row__detail">
+                <p class="team-row__bio">Gloss formulation matched precisely to your undertone. Noor's colour stays true two months in because every mix is blended fresh in-house, never from a pre-packaged chart.</p>
+                <ul class="team-row__tags">
+                  <li>Gloss &amp; Toner</li><li>Highlights</li><li>Colour Correction</li>
+                </ul>
+                <a href="404.html" class="team-row__book">Book with Noor <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-row" data-index="3" data-aos="fade-up" data-aos-delay="240">
+          <button class="team-row__trigger" aria-expanded="false" aria-controls="team-panel-3">
+            <span class="team-row__num">04</span>
+            <span class="team-row__name">Sana Merchant</span>
+            <span class="team-row__role">Nail Artist</span>
+            <span class="team-row__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="team-row__panel" id="team-panel-3" hidden>
+            <div class="team-row__inner">
+              <div class="team-row__img-wrap">
+                <img src="assets/images/people-2.webp"
+                  alt="Sana Merchant- Nail Artist">
+              </div>
+              <div class="team-row__detail">
+                <p class="team-row__bio">Architectural nail design, zero shortcuts. Sana builds every set with a structural base coat and custom pigment mix- expect three weeks of perfect wear, or she'll redo it.</p>
+                <ul class="team-row__tags">
+                  <li>Gel Sculpt</li><li>Nail Art</li><li>Nail Treatments</li>
+                </ul>
+                <a href="404.html" class="team-row__book">Book with Sana <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 9. BOOKING CTA ============ -->
+    <section class="book" id="book">
+      <div class="book__inner">
+        <p class="section-cta-eyebrow section-eyebrows">Ready when you are</p>
+        <h2 class="book__title">Let's find you a chair this week.</h2>
+        <form class="book__form" id="bookForm" novalidate data-aos="fade-up" data-aos-delay="100">
+          <div class="book__field">
+            <label for="bookName">Name</label>
+            <input type="text" id="bookName" placeholder="Your name" required>
+          </div>
+          <div class="book__field">
+            <label for="bookService">Service</label>
+            <select id="bookService" required>
+              <option value="" disabled selected>Choose one</option>
+              <option>Hair Studio</option>
+              <option>Skin Atelier</option>
+              <option>Nail Bar</option>
+              <option>Lash &amp; Brow</option>
+              <option>Body Rituals</option>
+              <option>Makeup Studio</option>
+              <option>The Stackly Hour</option>
+            </select>
+          </div>
+          <div class="book__field">
+            <label for="bookDate">Preferred date</label>
+            <input type="date" id="bookDate" required>
+          </div>
+          <button type="submit" class="btn btn--primary book__submit">Request appointment</button>
+        </form>
+        <p class="book__note" id="bookNote"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="footer__brand" data-aos="fade-up" data-aos-delay="0">
+        <a href="index.html" class="nav__logo footer__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="nav__logo-img"></a>
+        <p>A beauty house for hair, skin, and slow mornings. Open six days, by appointment.</p>
+        <div class="footer__brand-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col" data-aos="fade-up" data-aos-delay="90">
+        <h4>Quick Links</h4>
+        <p><a href="index.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Home</a></p>
+        <p><a href="about.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;About</a></p>
+        <p><a href="services.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Services</a></p>
+        <p><a href="blog.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Blog</a></p>
+        <p><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Contact</a></p>
+      </div>
+
+      <div class="footer__col" data-aos="fade-up" data-aos-delay="180">
+        <h4>Contact</h4>
+        <p><a href="404.html"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 9876543210</a></p>
+        <p><a href="404.html"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;info@thestackly.com</a></p>
+        <p><a href="404.html"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Salem, Tamil Nadu, India</a></p>
+      </div>
+
+      <div class="footer__col footer__col--newsletter" data-aos="fade-up" data-aos-delay="270">
+        <h4>Stay in the loop</h4>
+        <p>One email a month, mostly about scalp care.</p>
+        <form class="footer__form" id="newsletterForm" action="404.html" method="get" novalidate>
+          <div class="footer__form-row">
+            <input type="email" id="newsletterEmail" name="email" placeholder="you@email.com" autocomplete="email">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <p class="footer__error" id="newsletterError" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Stackly Beauty House. All rights reserved.</span>
+      <div class="footer__social">
+        <a href="404.html">Terms & Conditions</a>
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Return Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="index.html" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

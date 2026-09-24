@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Us — Stackly Botanical Beauty House</title>
+  <meta name="description"
+    content="Get in touch with Stackly — call, WhatsApp, or visit our Salem studio. Directions, hours, and answers to common questions.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+
+<body>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__mark">
+      <img src="assets/images/stackly-logo.webp" alt="Stackly" class="preloader__logo">
+    </div>
+    <div class="preloader__bar"><span id="preloaderProgress"></span></div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR DOT ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="nav" id="siteNav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="nav__logo-img"></a>
+
+      <nav class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="blog.html" class="nav__link">Blog</a>
+        <a href="contact.html" class="nav__link is-active" aria-current="page">Contact</a>
+      </nav>
+
+      <a href="login.html" class="nav__cta">Login</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="mobile-menu__link">Home</a>
+    <a href="about.html" class="mobile-menu__link">About</a>
+    <a href="services.html" class="mobile-menu__link">Services</a>
+    <a href="blog.html" class="mobile-menu__link">Blog</a>
+    <a href="contact.html" class="mobile-menu__link is-active" aria-current="page">Contact</a>
+    <a href="login.html" class="mobile-menu__book">Login</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ 1. PAGE HERO ============ -->
+    <section class="visit-hero" id="visitHero">
+      <div class="visit-hero__inner">
+
+        <!-- Left col: editorial text -->
+        <div class="visit-hero__content" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+          <p class="visit-hero__crumb" data-aos="fade-up" data-aos-delay="150"><a href="index.html">Home</a><span>/</span>Contact</p>
+          <p class="visit-hero__eyebrow" data-aos="fade-up" data-aos-delay="220">
+            <span class="visit-hero__eyebrow-line"></span>
+            Get In Touch
+          </p>
+          <h1 class="visit-hero__title" data-aos="fade-up" data-aos-delay="300">
+            <span class="visit-hero__line">Come sit with us,</span>
+            <span class="visit-hero__line">or just <em>say hello.</em></span>
+          </h1>
+          <p class="visit-hero__desc" data-aos="fade-up" data-aos-delay="380">Whether you're ready to book a chair or just have a question about a treatment — we answer most messages within a day, and calls a lot faster than that.</p>
+
+          <div class="visit-hero__actions" data-aos="fade-up" data-aos-delay="460">
+            <a href="404.html" class="btn btn--primary">Send a message</a>
+            <a href="404.html" class="visit-hero__browse">Get directions <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+
+          <div class="visit-hero__chips" data-aos="fade-up" data-aos-delay="540">
+            <a href="404.html" class="visit-chip">
+              <span class="visit-chip__icon"><i class="fa-solid fa-phone"></i></span>
+              <span>+91 98765 43210</span>
+            </a>
+            <a href="404.html" target="_blank" rel="noopener" class="visit-chip">
+              <span class="visit-chip__icon"><i class="fa-brands fa-whatsapp"></i></span>
+              <span>WhatsApp</span>
+            </a>
+            <a href="404.html" class="visit-chip">
+              <span class="visit-chip__icon"><i class="fa-solid fa-envelope"></i></span>
+              <span>info@thestackly.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right col: image stack -->
+        <div class="visit-hero__visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="visit-hero__img-wrap">
+            <img
+              src="assets/images/salon-image-33.webp"
+              alt="The Stackly studio floor with round mirrors and styling chairs"
+              class="visit-hero__img visit-hero__img--main" data-aos="zoom-in" data-aos-delay="320">
+            <img
+              src="assets/images/salon-image-28.webp"
+              alt="Reception seating and styling stations at the studio"
+              class="visit-hero__img visit-hero__img--float" data-aos="zoom-in" data-aos-delay="480">
+          </div>
+
+          <!-- Floating accent chips -->
+          <div class="visit-hero__badge visit-hero__badge--a" data-aos="fade-up" data-aos-delay="580">
+            <i class="fa-regular fa-clock"></i>
+            <span>Replies within a day</span>
+          </div>
+          <div class="visit-hero__badge visit-hero__badge--b" data-aos="fade-up" data-aos-delay="660">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Salem studio</span>
+          </div>
+
+          <!-- Decorative blob -->
+          <div class="visit-hero__blob" aria-hidden="true" data-aos="zoom-in" data-aos-delay="250"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 2. QUICK CONTACT STRIP ============ -->
+    <section class="quick-contact" id="quickContact">
+      <div class="quick-contact__grid">
+
+        <div class="quick-card" data-aos="fade-up" data-aos-delay="0">
+          <span class="quick-card__num">01</span>
+          <h3>Call the studio</h3>
+          <p>Fastest for same-day questions and quick reschedules.</p>
+          <a href="404.html" class="quick-card__link">+91 98765 43210 <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="quick-card" data-aos="fade-up" data-aos-delay="90">
+          <span class="quick-card__num">02</span>
+          <h3>Message on WhatsApp</h3>
+          <p>Send a photo of the look you want — it helps us prep.</p>
+          <a href="404.html" target="_blank" rel="noopener" class="quick-card__link">+91 98765 43210
+            <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="quick-card" data-aos="fade-up" data-aos-delay="180">
+          <span class="quick-card__num">03</span>
+          <h3>Email us</h3>
+          <p>For press, collaborations, or anything that needs detail.</p>
+          <a href="404.html" class="quick-card__link">info@thestackly.com <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="quick-card" data-aos="fade-up" data-aos-delay="270">
+          <span class="quick-card__num">04</span>
+          <h3>Walk into the studio</h3>
+          <p>Salem, Tamil Nadu, India.</p>
+          <a href="404.html" target="_blank" rel="noopener" class="quick-card__link">Get directions <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ 3. CONTACT FORM + MAP ============ -->
+    <section class="reach" id="reach">
+      <div class="reach__form-col">
+        <p class="section-eyebrow">Send a message</p>
+        <h2 class="section-title">Tell us what<br>you're after.</h2>
+
+        <form class="reach-form" id="contactForm" novalidate>
+          <div class="reach-form__row">
+            <div class="reach-field" id="field-name">
+              <input type="text" id="cName" placeholder=" " autocomplete="name">
+              <label for="cName">Your name</label>
+              <span class="reach-field__error" id="err-name"></span>
+            </div>
+            <div class="reach-field" id="field-phone">
+              <input type="tel" id="cPhone" placeholder=" " autocomplete="tel">
+              <label for="cPhone">Phone number</label>
+              <span class="reach-field__error" id="err-phone"></span>
+            </div>
+          </div>
+
+          <div class="reach-field" id="field-email">
+            <input type="email" id="cEmail" placeholder=" " autocomplete="email">
+            <label for="cEmail">Email address</label>
+            <span class="reach-field__error" id="err-email"></span>
+          </div>
+
+          <div class="reach-field reach-field--select" id="field-reason">
+            <select id="cReason">
+              <option value="" disabled selected>Choose one</option>
+              <option>New booking</option>
+              <option>Reschedule an appointment</option>
+              <option>Product question</option>
+              <option>Press or collaboration</option>
+              <option>Something else</option>
+            </select>
+            <label for="cReason">Reason for reaching out</label>
+            <span class="reach-field__error" id="err-reason"></span>
+          </div>
+
+          <div class="reach-form__prefer">
+            <span>Preferred reply by</span>
+            <div class="reach-chips" role="radiogroup" aria-label="Preferred contact method">
+              <input type="radio" name="prefer" id="preferCall" value="Call" checked>
+              <label for="preferCall">Call</label>
+              <input type="radio" name="prefer" id="preferWhatsapp" value="WhatsApp">
+              <label for="preferWhatsapp">WhatsApp</label>
+              <input type="radio" name="prefer" id="preferEmail" value="Email">
+              <label for="preferEmail">Email</label>
+            </div>
+          </div>
+
+          <div class="reach-field" id="field-message">
+            <textarea id="cMessage" rows="4" placeholder=" "></textarea>
+            <label for="cMessage">Your message</label>
+            <span class="reach-field__error" id="err-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary reach-form__submit">Send message <i class="fa-solid fa-paper-plane"></i></button>
+          <p class="reach-form__note" id="reachNote"></p>
+        </form>
+      </div>
+
+      <div class="reach__map-col">
+        <div class="reach-map">
+          <iframe src="https://www.google.com/maps?q=Salem,Tamil+Nadu,India&output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Map to Stackly Beauty House, Salem">
+          </iframe>
+          <div class="reach-map__pin">
+            <span class="reach-map__pin-dot"></span>
+            <div class="reach-map__pin-card">
+              <strong>Stackly Studio</strong>
+              <span>Salem, Tamil Nadu 636001</span>
+              <a href="https://www.google.com/maps?q=Salem,Tamil+Nadu,India" target="_blank" rel="noopener">Open in Maps →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. GETTING HERE — EDITORIAL LAYOUT ============ -->
+    <section class="directions" id="directions">
+
+      <div class="directions__inner">
+
+        <!-- Left col: heading + CTA -->
+        <div class="directions__left" data-aos="fade-up" data-aos-delay="0">
+          <p class="section-eyebrow directions__eyebrow">Finding us</p>
+          <h2 class="directions__title">Getting to the<br>studio.</h2>
+          <p class="directions__subtitle">Salem's most tucked-away beauty house — here's how to reach us.</p>
+          <a href="https://www.google.com/maps?q=Salem,Tamil+Nadu,India" target="_blank" rel="noopener" class="directions__maps-btn">
+            <i class="fa-solid fa-location-dot"></i>
+            Open in Google Maps
+          </a>
+        </div>
+
+        <!-- Right col: stacked rows -->
+        <div class="directions__right">
+
+          <div class="dir-row" data-aos="fade-up" data-aos-delay="0">
+            <div class="dir-row__head">
+              <span class="dir-row__num">01</span>
+              <div class="dir-row__icon">
+                <i class="fa-solid fa-car-side"></i>
+              </div>
+              <h3 class="dir-row__title">By car</h3>
+              <span class="dir-row__tag">~2 min walk</span>
+            </div>
+            <p class="dir-row__desc">Free two-hour validated parking directly behind the studio — entrance is off Third Cross Street.</p>
+          </div>
+
+          <div class="dir-row" data-aos="fade-up" data-aos-delay="80">
+            <div class="dir-row__head">
+              <span class="dir-row__num">02</span>
+              <div class="dir-row__icon">
+                <i class="fa-solid fa-train"></i>
+              </div>
+              <h3 class="dir-row__title">By train</h3>
+              <span class="dir-row__tag">~8 min walk</span>
+            </div>
+            <p class="dir-row__desc">An 8-minute walk from Salem Junction — take the main exit and head towards Omalur Road.</p>
+          </div>
+
+          <div class="dir-row" data-aos="fade-up" data-aos-delay="160">
+            <div class="dir-row__head">
+              <span class="dir-row__num">03</span>
+              <div class="dir-row__icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3 class="dir-row__title">By auto or cab</h3>
+              <span class="dir-row__tag">Drop right outside</span>
+            </div>
+            <p class="dir-row__desc">Tell your driver "Stackly, Salem Town, near Five Roads junction" — easy to find.</p>
+          </div>
+
+          <div class="dir-row" data-aos="fade-up" data-aos-delay="240">
+            <div class="dir-row__head">
+              <span class="dir-row__num">04</span>
+              <div class="dir-row__icon">
+                <i class="fa-solid fa-house"></i>
+              </div>
+              <h3 class="dir-row__title">On arrival</h3>
+              <span class="dir-row__tag">You're here ✦</span>
+            </div>
+            <p class="dir-row__desc">Ring the bell at the teal door and someone will buzz you straight up to the studio.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ============ 5. HOURS & AVAILABILITY ============ -->
+    <section class="hours" id="hours" data-aos="fade-up" data-aos-delay="80">
+      <div class="hours__head">
+        <p class="section-eyebrow section-eyebrow--light">Studio hours</p>
+        <h2 class="section-title hours__title">When you'll<br>find us open.</h2>
+        <p class="hours__badge" id="hoursBadge"><span class="hours__dot"></span>Checking hours…</p>
+      </div>
+
+      <ul class="hours__grid" id="hoursGrid">
+        <li data-day="1"><span>Monday</span><span>Closed</span></li>
+        <li data-day="2"><span>Tuesday</span><span>10am – 7pm</span></li>
+        <li data-day="3"><span>Wednesday</span><span>10am – 7pm</span></li>
+        <li data-day="4"><span>Thursday</span><span>10am – 9pm</span></li>
+        <li data-day="5"><span>Friday</span><span>10am – 8pm</span></li>
+        <li data-day="6"><span>Saturday</span><span>9am – 8pm</span></li>
+        <li data-day="0"><span>Sunday</span><span>9am – 6pm</span></li>
+      </ul>
+      <p class="hours__note">Public holidays follow Sunday hours. The Stackly Hour ritual is bookable Tue–Sat only.</p>
+    </section>
+
+    <!-- ============ 6. FAQ ============ -->
+    <section class="faq" id="faq" data-aos="fade-up" data-aos-delay="60">
+      <div class="faq__head">
+        <p class="section-eyebrow">Before you write in</p>
+        <h2 class="section-title">A few things<br>people ask us.</h2>
+      </div>
+
+      <div class="faq__list" id="faqList" data-aos="fade-up" data-aos-delay="90">
+        <div class="faq-item is-open">
+          <button class="faq-item__q" aria-expanded="true">
+            <span>Do you take walk-ins?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>For hair and skin services, yes, when a chair is free — though booking ahead guarantees your stylist of
+              choice. The Stackly Hour ritual is booking-only.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>How far ahead should I book?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>3–5 days for most services, and 2–3 weeks for bridal or event work with Rhea or Noor, since their
+              calendars fill up quickly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>What's your cancellation policy?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>Free to reschedule up to 12 hours before your appointment. Cancellations inside that window carry a small
+              fee, applied as credit toward your next visit.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Do you offer gift cards?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>Yes — digital gift cards can be sent by email the same day, in any amount, redeemable against any service
+              at the studio.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Is parking available?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>Free validated parking for two hours directly behind the studio. Street parking is also usually easy to
+              find along Silk Route Avenue.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-item__q" aria-expanded="false">
+            <span>Can I request a specific stylist?</span>
+            <span class="faq-item__icon"></span>
+          </button>
+          <div class="faq-item__a">
+            <p>Always — just mention it in your message or note it under "reason for reaching out," and we'll match you
+              with their next available chair.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. FINAL CTA ============ -->
+
+    <section class="visit-cta" id="book">
+      <!-- decorative elements -->
+      <div class="visit-cta__bg-text" aria-hidden="true">Book</div>
+      <div class="visit-cta__orb visit-cta__orb--a" aria-hidden="true"></div>
+      <div class="visit-cta__orb visit-cta__orb--b" aria-hidden="true"></div>
+
+      <div class="visit-cta__inner">
+
+        <!-- Left: editorial heading -->
+        <div class="visit-cta__left">
+          <p class="visit-cta__eyebrow">
+            <span class="visit-cta__eyebrow-line"></span>
+            Ready when you are
+          </p>
+          <h2 class="visit-cta__title">
+            Your chair is<br>
+            <em>easier to reach</em><br>
+            than you think.
+          </h2>
+          <p class="visit-cta__desc">Six days a week, by appointment. Most same-day slots open up by 11am — just reach out.</p>
+        </div>
+
+        <!-- Right: actions + social -->
+        <div class="visit-cta__right">
+
+          <div class="visit-cta__action-block">
+            <a href="404.html" class="visit-cta__action-btn visit-cta__action-btn--primary">
+              <span class="visit-cta__action-icon">
+                <i class="fa-solid fa-phone"></i>
+              </span>
+              <span class="visit-cta__action-text">
+                <strong>Call the studio</strong>
+                <small>+91 98765 43210</small>
+              </span>
+              <i class="fa-solid fa-arrow-right visit-cta__action-arrow"></i>
+            </a>
+
+            <a href="404.html" target="_blank" rel="noopener" class="visit-cta__action-btn visit-cta__action-btn--secondary">
+              <span class="visit-cta__action-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </span>
+              <span class="visit-cta__action-text">
+                <strong>Book on WhatsApp</strong>
+                <small>+91 98765 43210</small>
+              </span>
+              <i class="fa-solid fa-arrow-right visit-cta__action-arrow"></i>
+            </a>
+
+            <a href="404.html" class="visit-cta__action-btn visit-cta__action-btn--secondary">
+              <span class="visit-cta__action-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
+              <span class="visit-cta__action-text">
+                <strong>Send an email</strong>
+                <small>info@thestackly.com</small>
+              </span>
+              <i class="fa-solid fa-arrow-right visit-cta__action-arrow"></i>
+            </a>
+          </div>
+
+          <div class="visit-cta__social">
+            <span>Follow the ritual</span>
+            <div class="visit-cta__social-links">
+              <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i> Pinterest</a>
+              <a href="404.html" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="footer__top">
+      <div class="footer__brand" data-aos="fade-up" data-aos-delay="0">
+        <a href="index.html" class="nav__logo footer__logo"><img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="nav__logo-img"></a>
+        <p>A beauty house for hair, skin, and slow mornings. Open six days, by appointment.</p>
+        <div class="footer__brand-social">
+          <a href="404.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="404.html" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <div class="footer__col" data-aos="fade-up" data-aos-delay="90">
+        <h4>Quick Links</h4>
+        <p><a href="index.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Home</a></p>
+        <p><a href="about.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;About</a></p>
+        <p><a href="services.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Services</a></p>
+        <p><a href="blog.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Blog</a></p>
+        <p><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>&nbsp;&nbsp;Contact</a></p>
+      </div>
+
+      <div class="footer__col" data-aos="fade-up" data-aos-delay="180">
+        <h4>Contact</h4>
+        <p><a href="404.html"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91 9876543210</a></p>
+        <p><a href="404.html"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;info@thestackly.com</a></p>
+        <p><a href="404.html"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Salem, Tamil Nadu, India</a></p>
+      </div>
+
+      <div class="footer__col footer__col--newsletter" data-aos="fade-up" data-aos-delay="270">
+        <h4>Stay in the loop</h4>
+        <p>One email a month, mostly about scalp care.</p>
+        <form class="footer__form" id="newsletterForm" action="404.html" method="get" novalidate>
+          <div class="footer__form-row">
+            <input type="email" id="newsletterEmail" name="email" placeholder="you@email.com" autocomplete="email">
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+          <p class="footer__error" id="newsletterError" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© 2026 Stackly Beauty House. All rights reserved.</span>
+      <div class="footer__social">
+        <a href="404.html">Terms & Conditions</a>
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Return Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="contact.html" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/js/contact.js"></script>
+</body>
+
+</html>

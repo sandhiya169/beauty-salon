@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salon Manager Dashboard — Stackly</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="dash-body">
+
+  <div class="dash-overlay" id="dashOverlay"></div>
+
+  <div class="dash-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <a href="salon-dashboard.html" class="dash-sidebar__brand"><img src="assets/images/stackly-white.webp" alt="Stackly logo" class="dash-logo-img"></a>
+      <div class="dash-sidebar__role">Salon Manager Dashboard</div>
+      <div class="dash-sidebar__user-email"></div>
+
+
+
+      <nav class="dash-nav">
+        <button class="dash-nav__link is-active" data-section="overview" data-label="Overview">
+          <i class="fa-solid fa-table-cells-large dash-icon"></i>
+          Overview
+        </button>
+        <button class="dash-nav__link" data-section="appointments" data-label="Appointments">
+          <i class="fa-solid fa-calendar-check dash-icon"></i>
+          Appointments
+        </button>
+        <button class="dash-nav__link" data-section="staff" data-label="Staff">
+          <i class="fa-solid fa-user-group dash-icon"></i>
+          Staff
+        </button>
+        <button class="dash-nav__link" data-section="clients" data-label="Clients">
+          <i class="fa-solid fa-user dash-icon"></i>
+          Clients
+        </button>
+      </nav>
+
+      <div class="dash-sidebar__foot">
+        <button class="dash-nav__link is-home js-home">
+          <i class="fa-solid fa-house dash-icon"></i>
+          Back to Home
+        </button>
+        <button class="dash-nav__link is-logout js-logout">
+          <i class="fa-solid fa-right-from-bracket dash-icon"></i>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="dash-main">
+      <header class="dash-topbar">
+        <div class="dash-topbar__left">
+          <button class="dash-menu-toggle" id="dashMenuToggle"
+            aria-label="Open menu"><span></span><span></span><span></span></button>
+          <h1 class="dash-topbar__title" id="dashTopbarTitle">Overview</h1>
+        </div>
+        <div class="dash-topbar__right">
+          <button class="dash-bell js-action" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+          </button>
+          <span class="dash-user-email"></span>
+          <div class="dash-avatar">R</div>
+        </div>
+      </header>
+
+      <main class="dash-content">
+
+        <!-- OVERVIEW -->
+        <section class="dash-section is-active" id="overview">
+          <div class="dash-section__head">
+            <h2>Good morning, Admin</h2>
+            <p>Here's how Stackly is looking today across bookings, revenue and your team.</p>
+          </div>
+
+          <div class="panel">
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-card__label">Today's appointments</div>
+                <div class="stat-card__value">18</div>
+                <div class="stat-card__sub">4 awaiting confirmation</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Today's revenue</div>
+                <div class="stat-card__value">₹42,600</div>
+                <div class="stat-card__sub">▲ 12% vs. yesterday</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">New clients this week</div>
+                <div class="stat-card__value">27</div>
+                <div class="stat-card__sub">6 from referrals</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Upcoming appointments</h3>
+              <button class="btn btn--ghost btn--sm js-action">View All</button>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Service</th>
+                    <th>Stylist</th>
+                    <th>Time</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Meera Shah</td>
+                    <td>The Stackly Hour</td>
+                    <td>Rhea Kapoor</td>
+                    <td>11:00 AM</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td>Divya Nair</td>
+                    <td>Botanical Facial</td>
+                    <td>Farah Sheikh</td>
+                    <td>12:30 PM</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td>Ishaan Roy</td>
+                    <td>Precision Cut</td>
+                    <td>Noor Iyer</td>
+                    <td>2:00 PM</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Quick actions</h3>
+            </div>
+            <div class="action-grid">
+              <button class="action-btn js-action">Add Appointment<span>Book a walk-in or phone request</span></button>
+              <button class="action-btn js-action">Add Staff Member<span>Bring a new stylist onto the
+                  roster</span></button>
+              <button class="action-btn js-action">Add Service<span>List a new treatment or ritual</span></button>
+            </div>
+          </div>
+          <!-- Revenue, last 7 days (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Revenue · last 7 days</h3>
+            </div>
+            <div class="dash-chart">
+              <div class="dash-chart__top">
+                <div class="dash-chart__total">
+                  <strong>₹2,79,100</strong>
+                  <span>total, Fri – Thu</span>
+                </div>
+                <span class="dash-chart__note">Best day: Mon · ₹52,000</span>
+              </div>
+              <div class="dash-bars" role="img"
+                aria-label="Daily revenue in thousands of rupees: Fri 34, Sat 29, Sun 47, Mon 52, Tue 38, Wed 36.5, Thu 42.6">
+                <div class="dash-bar"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:65%"><span class="dash-bar__val">34k</span></div></div><span class="dash-bar__day">Fri</span></div>
+                <div class="dash-bar"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:56%"><span class="dash-bar__val">29k</span></div></div><span class="dash-bar__day">Sat</span></div>
+                <div class="dash-bar"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:90%"><span class="dash-bar__val">47k</span></div></div><span class="dash-bar__day">Sun</span></div>
+                <div class="dash-bar"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:100%"><span class="dash-bar__val">52k</span></div></div><span class="dash-bar__day">Mon</span></div>
+                <div class="dash-bar"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:73%"><span class="dash-bar__val">38k</span></div></div><span class="dash-bar__day">Tue</span></div>
+                <div class="dash-bar"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:70%"><span class="dash-bar__val">36.5k</span></div></div><span class="dash-bar__day">Wed</span></div>
+                <div class="dash-bar is-today"><div class="dash-bar__track"><div class="dash-bar__fill" style="--h:82%"><span class="dash-bar__val">42.6k</span></div></div><span class="dash-bar__day">Today</span></div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- APPOINTMENTS -->
+        <section class="dash-section" id="appointments">
+          <div class="dash-section__head">
+            <h2>Appointments</h2>
+            <p>Manage today's schedule and everything coming up this week.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Filter</h3>
+              <button class="btn btn--primary btn--sm js-action">Add New Appointment</button>
+            </div>
+            <div class="btn-row">
+              <button class="btn btn--ghost btn--sm js-action">Today</button>
+              <button class="btn btn--ghost btn--sm js-action">This Week</button>
+              <button class="btn btn--ghost btn--sm js-action">This Month</button>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Scheduled</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Service</th>
+                    <th>Stylist</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Meera Shah</td>
+                    <td>The Stackly Hour</td>
+                    <td>Rhea Kapoor</td>
+                    <td>Today, 11:00 AM</td>
+                    <td><span class="badge badge--gold">Confirmed</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td>Priya Kulkarni</td>
+                    <td>Colour Refresh</td>
+                    <td>Noor Iyer</td>
+                    <td>Today, 3:30 PM</td>
+                    <td><span class="badge">Pending</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td>Aditya Rao</td>
+                    <td>Precision Cut</td>
+                    <td>Rhea Kapoor</td>
+                    <td>Tomorrow, 10:00 AM</td>
+                    <td><span class="badge badge--gold">Confirmed</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                  <tr>
+                    <td>Sana Merchant</td>
+                    <td>Nail Artistry</td>
+                    <td>Farah Sheikh</td>
+                    <td>Tomorrow, 1:00 PM</td>
+                    <td><span class="badge badge--muted">Cancelled</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Manage</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Weekly load</h3>
+            </div>
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-card__label">Booked slots</div>
+                <div class="stat-card__value">86%</div>
+                <div class="stat-card__sub">of available chairs</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">No-shows</div>
+                <div class="stat-card__value">3</div>
+                <div class="stat-card__sub">this week</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Avg. ticket</div>
+                <div class="stat-card__value">₹2,350</div>
+                <div class="stat-card__sub">▲ 5% vs. last week</div>
+              </div>
+            </div>
+          </div>
+          <!-- Chair availability today (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Chair availability · today</h3>
+            </div>
+            <div class="dash-legend">
+              <span><i></i>Open</span>
+              <span><i class="is-booked"></i>Booked</span>
+              <span><i class="is-break"></i>Break</span>
+            </div>
+            <div class="dash-slots">
+              <div class="dash-slot-card">
+                <div class="dash-slot-card__head">
+                  <div class="info-card__avatar">R</div>
+                  <div>
+                    <h4>Rhea Kapoor</h4>
+                    <p>Senior Stylist</p>
+                  </div>
+                  <span class="badge badge--gold">5 open</span>
+                </div>
+                <div class="dash-slot-list">
+                  <span class="dash-slot">10 AM</span>
+                  <span class="dash-slot dash-slot--booked">11 AM</span>
+                  <span class="dash-slot">12 PM</span>
+                  <span class="dash-slot dash-slot--break">1 PM</span>
+                  <span class="dash-slot">2 PM</span>
+                  <span class="dash-slot">3 PM</span>
+                  <span class="dash-slot dash-slot--booked">4 PM</span>
+                  <span class="dash-slot">5 PM</span>
+                </div>
+              </div>
+              <div class="dash-slot-card">
+                <div class="dash-slot-card__head">
+                  <div class="info-card__avatar">F</div>
+                  <div>
+                    <h4>Farah Sheikh</h4>
+                    <p>Skin Specialist</p>
+                  </div>
+                  <span class="badge badge--gold">5 open</span>
+                </div>
+                <div class="dash-slot-list">
+                  <span class="dash-slot dash-slot--booked">10 AM</span>
+                  <span class="dash-slot">11 AM</span>
+                  <span class="dash-slot dash-slot--booked">12 PM</span>
+                  <span class="dash-slot dash-slot--break">1 PM</span>
+                  <span class="dash-slot">2 PM</span>
+                  <span class="dash-slot">3 PM</span>
+                  <span class="dash-slot">4 PM</span>
+                  <span class="dash-slot">5 PM</span>
+                </div>
+              </div>
+              <div class="dash-slot-card">
+                <div class="dash-slot-card__head">
+                  <div class="info-card__avatar">N</div>
+                  <div>
+                    <h4>Noor Iyer</h4>
+                    <p>Colourist</p>
+                  </div>
+                  <span class="badge badge--gold">5 open</span>
+                </div>
+                <div class="dash-slot-list">
+                  <span class="dash-slot">10 AM</span>
+                  <span class="dash-slot">11 AM</span>
+                  <span class="dash-slot">12 PM</span>
+                  <span class="dash-slot dash-slot--break">1 PM</span>
+                  <span class="dash-slot dash-slot--booked">2 PM</span>
+                  <span class="dash-slot dash-slot--booked">3 PM</span>
+                  <span class="dash-slot">4 PM</span>
+                  <span class="dash-slot">5 PM</span>
+                </div>
+              </div>
+              <div class="dash-slot-card">
+                <div class="dash-slot-card__head">
+                  <div class="info-card__avatar">S</div>
+                  <div>
+                    <h4>Sana Merchant</h4>
+                    <p>Nail Artist</p>
+                  </div>
+                  <span class="badge badge--gold">5 open</span>
+                </div>
+                <div class="dash-slot-list">
+                  <span class="dash-slot">10 AM</span>
+                  <span class="dash-slot dash-slot--booked">11 AM</span>
+                  <span class="dash-slot">12 PM</span>
+                  <span class="dash-slot dash-slot--break">1 PM</span>
+                  <span class="dash-slot">2 PM</span>
+                  <span class="dash-slot">3 PM</span>
+                  <span class="dash-slot dash-slot--booked">4 PM</span>
+                  <span class="dash-slot">5 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- STAFF -->
+        <section class="dash-section" id="staff">
+          <div class="dash-section__head">
+            <h2>Staff</h2>
+            <p>Your stylists and specialists, their focus areas and current standing.</p>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Team roster</h3>
+              <button class="btn btn--primary btn--sm js-action">Invite Staff Member</button>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <div class="info-card__avatar">R</div>
+                <h4>Rhea Kapoor</h4>
+                <p>Senior Stylist — cuts &amp; colour</p>
+                <span class="badge badge--gold">Available</span>
+                <button class="btn btn--ghost btn--sm js-action">Edit</button>
+              </div>
+              <div class="info-card">
+                <div class="info-card__avatar">F</div>
+                <h4>Farah Sheikh</h4>
+                <p>Skin Specialist — facials &amp; peels</p>
+                <span class="badge badge--gold">Available</span>
+                <button class="btn btn--ghost btn--sm js-action">Edit</button>
+              </div>
+              <div class="info-card">
+                <div class="info-card__avatar">N</div>
+                <h4>Noor Iyer</h4>
+                <p>Colourist — balayage &amp; gloss</p>
+                <span class="badge badge--muted">On leave</span>
+                <button class="btn btn--ghost btn--sm js-action">Edit</button>
+              </div>
+              <div class="info-card">
+                <div class="info-card__avatar">S</div>
+                <h4>Sana Merchant</h4>
+                <p>Nail Artist — gel &amp; nail art</p>
+                <span class="badge badge--gold">Available</span>
+                <button class="btn btn--ghost btn--sm js-action">Edit</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Performance this month</h3>
+            </div>
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-card__label">Top stylist</div>
+                <div class="stat-card__value">Rhea K.</div>
+                <div class="stat-card__sub">142 appointments</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Avg. rating</div>
+                <div class="stat-card__value">4.9</div>
+                <div class="stat-card__sub">across all staff</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Rebooking rate</div>
+                <div class="stat-card__value">76%</div>
+                <div class="stat-card__sub">clients return within 6 weeks</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Shift requests</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Staff</th>
+                    <th>Request</th>
+                    <th>Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Noor Iyer</td>
+                    <td>Leave</td>
+                    <td>Sep 18–20</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Review</button></td>
+                  </tr>
+                  <tr>
+                    <td>Sana Merchant</td>
+                    <td>Shift swap</td>
+                    <td>Sep 22</td>
+                    <td><button class="btn btn--ghost btn--sm js-action">Review</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- Training & certifications (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Training &amp; certifications</h3>
+              <button class="btn btn--ghost btn--sm js-action">Assign Course</button>
+            </div>
+            <div class="dash-train">
+              <div class="dash-train__item">
+                <div class="dash-train__row">
+                  <h4>Advanced colour correction</h4>
+                  <span class="dash-train__pct">80%</span>
+                </div>
+                <div class="dash-meter" role="progressbar" aria-label="Advanced colour correction progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><span style="width:80%"></span></div>
+                <div class="dash-train__who">Rhea Kapoor · Senior Stylist</div>
+              </div>
+              <div class="dash-train__item">
+                <div class="dash-train__row">
+                  <h4>Chemical peel · level 2</h4>
+                  <span class="dash-train__pct">60%</span>
+                </div>
+                <div class="dash-meter" role="progressbar" aria-label="Chemical peel · level 2 progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span style="width:60%"></span></div>
+                <div class="dash-train__who">Farah Sheikh · Skin Specialist</div>
+              </div>
+              <div class="dash-train__item">
+                <div class="dash-train__row">
+                  <h4>Balayage masterclass</h4>
+                  <span class="dash-train__pct">100%</span>
+                </div>
+                <div class="dash-meter" role="progressbar" aria-label="Balayage masterclass progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span style="width:100%"></span></div>
+                <div class="dash-train__who">Noor Iyer · Colourist · completed</div>
+              </div>
+              <div class="dash-train__item">
+                <div class="dash-train__row">
+                  <h4>Gel-X certification</h4>
+                  <span class="dash-train__pct">45%</span>
+                </div>
+                <div class="dash-meter" role="progressbar" aria-label="Gel-X certification progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="45"><span style="width:45%"></span></div>
+                <div class="dash-train__who">Sana Merchant · Nail Artist</div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- CLIENTS -->
+        <section class="dash-section" id="clients">
+          <div class="dash-section__head">
+            <h2>Clients</h2>
+            <p>Your client base at a glance — history, loyalty and recent activity.</p>
+          </div>
+
+          <div class="panel">
+            <div class="stat-grid">
+              <div class="stat-card">
+                <div class="stat-card__label">Total clients</div>
+                <div class="stat-card__value">1,842</div>
+                <div class="stat-card__sub">▲ 4% this quarter</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">New this month</div>
+                <div class="stat-card__value">63</div>
+                <div class="stat-card__sub">27 booked The Stackly Hour</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__label">Loyalty members</div>
+                <div class="stat-card__value">412</div>
+                <div class="stat-card__sub">22% of client base</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Recent clients</h3>
+              <button class="btn btn--ghost btn--sm js-action">Export Clients</button>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Last visit</th>
+                    <th>Total visits</th>
+                    <th>Loyalty tier</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Meera Shah</td>
+                    <td>Sep 12, 2026</td>
+                    <td>14</td>
+                    <td><span class="badge badge--gold">Gold</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">View Profile</button></td>
+                  </tr>
+                  <tr>
+                    <td>Divya Nair</td>
+                    <td>Sep 10, 2026</td>
+                    <td>6</td>
+                    <td><span class="badge">Silver</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">View Profile</button></td>
+                  </tr>
+                  <tr>
+                    <td>Ishaan Roy</td>
+                    <td>Sep 8, 2026</td>
+                    <td>2</td>
+                    <td><span class="badge badge--muted">New</span></td>
+                    <td><button class="btn btn--ghost btn--sm js-action">View Profile</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Client feedback</h3>
+            </div>
+            <div class="card-grid">
+              <div class="info-card">
+                <h4>Meera Shah</h4>
+                <p>"Booked the Stackly Hour before a wedding — became my monthly reset."</p>
+                <span class="badge badge--gold">5.0 ★</span>
+              </div>
+              <div class="info-card">
+                <h4>Divya Nair</h4>
+                <p>"Precise cuts, unrushed pace, genuinely relaxing space."</p>
+                <span class="badge badge--gold">4.8 ★</span>
+              </div>
+              <div class="info-card">
+                <h4>Ishaan Roy</h4>
+                <p>"First visit and already booked my next colour appointment."</p>
+                <span class="badge badge--gold">4.9 ★</span>
+              </div>
+            </div>
+          </div>
+          <!-- Client mix (added) -->
+          <div class="panel">
+            <div class="panel__head">
+              <h3>Client mix · by visit frequency</h3>
+            </div>
+            <div class="dash-mix">
+              <div class="dash-mix__bar" role="img"
+                aria-label="Loyalty members 22 percent, regulars 51 percent, occasional 27 percent">
+                <span style="flex:22;background:var(--gold-500)"></span>
+                <span style="flex:51;background:var(--emerald-700)"></span>
+                <span style="flex:27;background:var(--blush-300)"></span>
+              </div>
+              <div class="dash-mix__legend">
+                <div class="dash-mix__item" style="--dot:var(--gold-500)">
+                  <strong>22%</strong>
+                  <span>Loyalty members</span>
+                  <small>412 clients</small>
+                </div>
+                <div class="dash-mix__item" style="--dot:var(--emerald-700)">
+                  <strong>51%</strong>
+                  <span>Regulars</span>
+                  <small>940 clients</small>
+                </div>
+                <div class="dash-mix__item" style="--dot:var(--blush-300)">
+                  <strong>27%</strong>
+                  <span>Occasional</span>
+                  <small>490 clients</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1427 @@
+/* ==========================================================================
+   Stackly — dashboard.css
+   Sidebar + topbar shell shared by the Salon Manager & Customer dashboards
+   ========================================================================== */
+
+.dash-body {
+  background: var(--ivory-100);
+  min-height: 100vh;
+}
+
+.dash-shell {
+  display: grid;
+  grid-template-columns: 264px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* Lets the main column shrink to the viewport instead of growing to the
+   widest thing inside it (this was what pushed the page sideways) */
+.dash-main {
+  min-width: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* SIDEBAR                                                           */
+/* ---------------------------------------------------------------- */
+.dash-sidebar {
+  background: var(--emerald-900);
+  color: var(--ivory-50);
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem 1.4rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.dash-sidebar__brand {
+  display: block;
+  height: 2.2rem;
+  line-height: 0;
+  margin-bottom: .3rem;
+  text-align: center;
+}
+
+.dash-logo-img {
+  height: 100%;
+  width: auto;
+  display: inline-block;
+}
+
+.dash-sidebar__brand span {
+  color: var(--gold-500);
+}
+
+.dash-sidebar__role {
+  font-size: 14px;
+  letter-spacing: .05em;
+  color: var(--blush-300);
+  margin-bottom: 1.2rem;
+  font-family: var(--font-display);
+  text-align: center;
+}
+
+.dash-nav {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  flex: 1;
+}
+
+.dash-nav__link {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .8rem .9rem;
+  border-radius: var(--radius-sm);
+  font-size: .92rem;
+  font-weight: 600;
+  color: rgba(250, 246, 239, .72);
+  border: none;
+  background: transparent;
+  text-align: left;
+  width: 100%;
+  transition: background .25s ease, color .25s ease;
+}
+
+.dash-nav__link .dash-icon {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  opacity: .85;
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.dash-nav__link:hover {
+  background: rgba(250, 246, 239, .08);
+  color: var(--ivory-50);
+}
+
+.dash-nav__link.is-active {
+  background: var(--gold-500);
+  color: var(--emerald-900);
+}
+
+.dash-nav__link.is-active .dash-icon {
+  opacity: 1;
+}
+
+.dash-sidebar__foot {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding-top: 1.4rem;
+  margin-top: 1.4rem;
+  border-top: 1px solid rgba(250, 246, 239, .14);
+}
+
+.dash-sidebar__foot .dash-nav__link.is-home:hover {
+  background: rgba(250, 246, 239, .08);
+}
+
+.dash-sidebar__foot .dash-nav__link.is-logout {
+  color: var(--blush-300);
+}
+
+.dash-sidebar__foot .dash-nav__link.is-logout:hover {
+  background: rgba(180, 88, 107, .16);
+  color: var(--ivory-50);
+}
+
+/* ---------------------------------------------------------------- */
+/* TOPBAR                                                            */
+/* ---------------------------------------------------------------- */
+.dash-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(251, 244, 241, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(36, 26, 29, .08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem var(--pad);
+}
+
+.dash-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dash-topbar__title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--emerald-900);
+}
+
+.dash-menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.dash-menu-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--emerald-900);
+}
+
+.dash-topbar__right {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.dash-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--emerald-900);
+  color: var(--ivory-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.dash-bell {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(36, 26, 29, .15);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dash-bell:hover {
+  border-color: var(--emerald-900);
+}
+
+/* ---------------------------------------------------------------- */
+/* CONTENT                                                           */
+/* ---------------------------------------------------------------- */
+.dash-content {
+  padding: 2rem var(--pad) 4rem;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dash-section {
+  display: none;
+}
+
+.dash-section.is-active {
+  display: block;
+  animation: dashFade .35s ease;
+}
+
+@keyframes dashFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dash-section__head {
+  margin-bottom: 1.8rem;
+}
+
+.dash-section__head h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  color: var(--emerald-900);
+  margin-bottom: .4rem;
+}
+
+.dash-section__head p {
+  color: var(--ink-600);
+  font-size: .95rem;
+  max-width: 52ch;
+}
+
+.panel {
+  margin-bottom: 2.2rem;
+}
+
+.panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.panel__head h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--emerald-900);
+}
+
+/* Stat cards */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.stat-card__label {
+  font-size: .8rem;
+  color: var(--ink-400);
+  margin-bottom: .5rem;
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  color: var(--emerald-900);
+}
+
+.stat-card__sub {
+  font-size: .8rem;
+  color: var(--gold-500);
+  font-weight: 600;
+  margin-top: .3rem;
+}
+
+/* Generic card grid (services / stylists / etc) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.info-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.4rem;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.info-card__avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--blush-100);
+  color: var(--emerald-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.info-card h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--emerald-900);
+}
+
+.info-card p {
+  font-size: .86rem;
+  color: var(--ink-600);
+}
+
+.info-card .badge {
+  align-self: flex-start;
+}
+
+.badge {
+  display: inline-block;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  padding: .3rem .7rem;
+  border-radius: 100px;
+  background: var(--blush-100);
+  color: var(--emerald-700);
+}
+
+.badge--gold {
+  background: rgba(200, 164, 103, .18);
+  color: #7a5f2c;
+}
+
+.badge--muted {
+  background: var(--ivory-100);
+  color: var(--ink-400);
+}
+
+/* Table */
+.dash-table-wrap {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.dash-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dash-table th,
+.dash-table td {
+  padding: .95rem 1.2rem;
+  text-align: left;
+  font-size: .88rem;
+}
+
+.dash-table th {
+  color: var(--ink-400);
+  font-weight: 600;
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 1px solid rgba(36, 26, 29, .08);
+}
+
+.dash-table tbody tr {
+  border-bottom: 1px solid rgba(36, 26, 29, .06);
+}
+
+.dash-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.dash-table td {
+  color: var(--ink-900);
+}
+
+.dash-table .btn {
+  padding: .5rem 1.1rem;
+  font-size: .8rem;
+}
+
+/* Quick action buttons */
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;
+  background: var(--white);
+  border: 1px solid rgba(36, 26, 29, .1);
+  border-radius: var(--radius-md);
+  padding: 1.3rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--emerald-900);
+  transition: border-color .3s ease, transform .3s ease;
+}
+
+.action-btn span {
+  font-weight: 400;
+  font-size: .82rem;
+  color: var(--ink-600);
+}
+
+.action-btn:hover {
+  border-color: var(--emerald-900);
+  transform: translateY(-3px);
+}
+
+/* Small buttons row */
+.btn--sm {
+  padding: .55rem 1.1rem;
+  font-size: .82rem;
+  width: fit-content;
+}
+
+.btn-row {
+  display: flex;
+  gap: .7rem;
+  flex-wrap: wrap;
+}
+
+/* Profile form (read-only display) */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.profile-field {
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 14px rgba(42, 20, 32, .05);
+}
+
+.profile-field label {
+  display: block;
+  font-size: .74rem;
+  color: var(--ink-400);
+  margin-bottom: .35rem;
+}
+
+.profile-field div {
+  font-weight: 600;
+  color: var(--ink-900);
+}
+
+/* Sidebar mobile overlay */
+.dash-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 26, 29, .45);
+  z-index: 39;
+}
+
+.dash-overlay.is-visible {
+  display: block;
+}
+
+/* ---------------------------------------------------------------- */
+/* SIDEBAR USER CARD                                                 */
+/* ---------------------------------------------------------------- */
+.dash-user {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  padding: .9rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-md);
+  background: linear-gradient(150deg, rgba(251, 244, 241, .13), rgba(251, 244, 241, .03));
+  border: 1px solid rgba(200, 164, 103, .32);
+}
+
+.dash-user__top {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.dash-user__avatar {
+  position: relative;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--emerald-900);
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500));
+  box-shadow: 0 0 0 3px rgba(200, 164, 103, .22);
+}
+
+.dash-user__avatar::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6fcf97;
+  border: 2px solid var(--emerald-900);
+}
+
+.dash-user__info {
+  min-width: 0;
+  flex: 1;
+}
+
+.dash-user__name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.25;
+  color: var(--ivory-50);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-user__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .4rem;
+  padding: .18rem .6rem;
+  border-radius: 100px;
+  background: rgba(200, 164, 103, .18);
+  color: var(--gold-300);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.dash-user__email {
+  display: flex;
+  align-items: flex-start;
+  gap: .55rem;
+  padding-top: .8rem;
+  border-top: 1px solid rgba(251, 244, 241, .14);
+  font-size: .78rem;
+  line-height: 1.4;
+  color: rgba(251, 244, 241, .72);
+}
+
+.dash-user__email i {
+  flex: none;
+  margin-top: .18rem;
+  font-size: .72rem;
+  color: var(--gold-300);
+}
+
+.dash-user__email span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* ---------------------------------------------------------------- */
+/* SHARED — progress meter                                           */
+/* ---------------------------------------------------------------- */
+.dash-meter {
+  height: 10px;
+  border-radius: 100px;
+  background: var(--blush-100);
+  overflow: hidden;
+}
+
+.dash-meter>span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-300));
+  transform-origin: left;
+  animation: dashGrow .9s var(--ease) .15s both;
+}
+
+@keyframes dashGrow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes dashRise {
+  from {
+    height: 0;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* CUSTOMER — Overview: loyalty progress                             */
+/* ---------------------------------------------------------------- */
+.dash-loyalty {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.dash-loyalty__top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .3rem 1rem;
+  margin-bottom: .9rem;
+  color: var(--ink-600);
+  font-size: .85rem;
+}
+
+.dash-loyalty__top strong {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  color: var(--emerald-900);
+}
+
+.dash-loyalty__top>span {
+  font-weight: 600;
+  color: var(--gold-500);
+}
+
+.dash-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.dash-tiers li {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--ivory-50);
+  border: 1px solid rgba(36, 26, 29, .08);
+}
+
+.dash-tiers li.is-done {
+  border-color: rgba(200, 164, 103, .55);
+}
+
+.dash-tiers li.is-next {
+  border-style: dashed;
+}
+
+.dash-tiers__icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: .55rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blush-100);
+  color: var(--emerald-700);
+  font-size: .72rem;
+}
+
+.dash-tiers li.is-done .dash-tiers__icon {
+  background: var(--gold-500);
+  color: var(--white);
+}
+
+.dash-tiers strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.02rem;
+  color: var(--emerald-900);
+}
+
+.dash-tiers small {
+  font-size: .78rem;
+  color: var(--ink-600);
+}
+
+/* ---------------------------------------------------------------- */
+/* CUSTOMER — My Appointments: before your visit                     */
+/* ---------------------------------------------------------------- */
+.dash-step__num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--emerald-900);
+  color: var(--gold-300);
+  font-family: var(--font-display);
+  font-size: .95rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* CUSTOMER — Favorites: member offers (ticket-style)                */
+/* ---------------------------------------------------------------- */
+.dash-coupons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.dash-coupon {
+  --side: 128px;
+  position: relative;
+  display: flex;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+  overflow: hidden;
+}
+
+.dash-coupon::before,
+.dash-coupon::after {
+  content: "";
+  position: absolute;
+  right: var(--side);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ivory-100);
+  transform: translateX(50%);
+}
+
+.dash-coupon::before {
+  top: -9px;
+}
+
+.dash-coupon::after {
+  bottom: -9px;
+}
+
+.dash-coupon__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .6rem;
+  padding: 1.4rem;
+}
+
+.dash-coupon__main h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--emerald-900);
+}
+
+.dash-coupon__main p {
+  font-size: .86rem;
+  color: var(--ink-600);
+}
+
+.dash-coupon__side {
+  flex: none;
+  width: var(--side);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: 1.2rem .8rem;
+  text-align: center;
+  color: var(--ivory-50);
+  background: linear-gradient(160deg, var(--emerald-900), var(--emerald-700));
+  border-left: 2px dashed rgba(200, 164, 103, .6);
+}
+
+.dash-coupon__side small {
+  font-size: .66rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--blush-300);
+}
+
+.dash-coupon__value {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  line-height: 1;
+  color: var(--gold-300);
+}
+
+.dash-coupon__code {
+  padding: .25rem .55rem;
+  border: 1px dashed rgba(251, 244, 241, .5);
+  border-radius: 6px;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* ---------------------------------------------------------------- */
+/* CUSTOMER — Profile: account & security rows                       */
+/* ---------------------------------------------------------------- */
+.dash-settings {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+  overflow: hidden;
+}
+
+.dash-setting {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.3rem;
+  border-bottom: 1px solid rgba(36, 26, 29, .07);
+}
+
+.dash-setting:last-child {
+  border-bottom: none;
+}
+
+.dash-setting__icon {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blush-100);
+  color: var(--emerald-700);
+}
+
+.dash-setting__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.dash-setting__text h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--emerald-900);
+}
+
+.dash-setting__text p {
+  font-size: .84rem;
+  color: var(--ink-600);
+  overflow-wrap: anywhere;
+}
+
+.dash-setting__act {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+/* ---------------------------------------------------------------- */
+/* SALON — Overview: revenue bar chart                               */
+/* ---------------------------------------------------------------- */
+.dash-chart {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.dash-chart__top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.dash-chart__total strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--emerald-900);
+}
+
+.dash-chart__total span {
+  font-size: .8rem;
+  color: var(--ink-400);
+}
+
+.dash-chart__note {
+  font-size: .8rem;
+  font-weight: 600;
+  color: var(--gold-500);
+}
+
+.dash-bars {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: .6rem;
+  height: 210px;
+  padding-top: 24px;
+}
+
+.dash-bar {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+
+.dash-bar__track {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.dash-bar__fill {
+  position: relative;
+  width: 100%;
+  max-width: 46px;
+  height: var(--h);
+  border-radius: 8px 8px 4px 4px;
+  background: linear-gradient(180deg, var(--blush-300), var(--blush-100));
+  animation: dashRise .8s var(--ease) both;
+}
+
+.dash-bar.is-today .dash-bar__fill {
+  background: linear-gradient(180deg, var(--gold-500), var(--gold-300));
+}
+
+.dash-bar__val {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: .3rem;
+  transform: translateX(-50%);
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--ink-600);
+  white-space: nowrap;
+}
+
+.dash-bar__day {
+  font-size: .72rem;
+  font-weight: 600;
+  color: var(--ink-400);
+}
+
+.dash-bar.is-today .dash-bar__day {
+  color: var(--emerald-900);
+}
+
+/* ---------------------------------------------------------------- */
+/* SALON — Appointments: chair availability                          */
+/* ---------------------------------------------------------------- */
+.dash-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.3rem;
+  margin-bottom: 1.1rem;
+  font-size: .78rem;
+  color: var(--ink-600);
+}
+
+.dash-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+}
+
+.dash-legend i {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(36, 26, 29, .18);
+}
+
+.dash-legend .is-booked {
+  background: var(--emerald-900);
+  border-color: var(--emerald-900);
+}
+
+.dash-legend .is-break {
+  background: var(--ivory-100);
+  border-style: dashed;
+}
+
+.dash-slots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.dash-slot-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.3rem;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.dash-slot-card__head {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 1rem;
+}
+
+.dash-slot-card__head .info-card__avatar {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+}
+
+.dash-slot-card__head div {
+  min-width: 0;
+}
+
+.dash-slot-card__head h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.02rem;
+  color: var(--emerald-900);
+}
+
+.dash-slot-card__head p {
+  font-size: .78rem;
+  color: var(--ink-400);
+}
+
+.dash-slot-card__head .badge {
+  margin-left: auto;
+  flex: none;
+}
+
+.dash-slot-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: .5rem;
+}
+
+.dash-slot {
+  padding: .5rem .2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(36, 26, 29, .16);
+  text-align: center;
+  font-size: .75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--ink-600);
+}
+
+.dash-slot--booked {
+  background: var(--emerald-900);
+  border-color: var(--emerald-900);
+  color: var(--ivory-50);
+}
+
+.dash-slot--break {
+  border-style: dashed;
+  color: var(--ink-400);
+  background: repeating-linear-gradient(45deg, var(--ivory-100) 0 6px, var(--ivory-50) 6px 12px);
+}
+
+/* ---------------------------------------------------------------- */
+/* SALON — Staff: training & certifications                          */
+/* ---------------------------------------------------------------- */
+.dash-train {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.dash-train__item {
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+  padding: 1.3rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.dash-train__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .8rem;
+}
+
+.dash-train__row h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.02rem;
+  color: var(--emerald-900);
+}
+
+.dash-train__pct {
+  flex: none;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--emerald-700);
+}
+
+.dash-train__who {
+  font-size: .82rem;
+  color: var(--ink-600);
+}
+
+/* ---------------------------------------------------------------- */
+/* SALON — Clients: client mix                                       */
+/* ---------------------------------------------------------------- */
+.dash-mix {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px rgba(42, 20, 32, .06);
+}
+
+.dash-mix__bar {
+  display: flex;
+  gap: 3px;
+  height: 16px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.dash-mix__bar span {
+  display: block;
+  min-width: 0;
+  height: 100%;
+  transform-origin: left;
+  animation: dashGrow .9s var(--ease) .15s both;
+}
+
+.dash-mix__legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.dash-mix__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.1rem;
+}
+
+.dash-mix__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .42rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--dot);
+}
+
+.dash-mix__item strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  color: var(--emerald-900);
+}
+
+.dash-mix__item span {
+  font-size: .82rem;
+  color: var(--ink-600);
+}
+
+.dash-mix__item small {
+  font-size: .74rem;
+  color: var(--ink-400);
+}
+
+/* ---------------------------------------------------------------- */
+/* RESPONSIVE                                                        */
+/* ---------------------------------------------------------------- */
+@media (max-width: 1080px) {
+
+  .stat-grid,
+  .card-grid,
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 960px) {
+  .dash-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dash-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: min(280px, 86vw);
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform .35s var(--ease);
+  }
+
+  .dash-sidebar.is-open {
+    transform: translateX(0);
+  }
+
+  .dash-menu-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .stat-grid,
+  .card-grid,
+  .action-grid,
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-topbar {
+    padding: 1rem 1.1rem;
+  }
+
+  .dash-content {
+    padding: 1.5rem 1.1rem 3rem;
+  }
+
+  /* Tables become stacked cards — nothing scrolls sideways.
+     Column headings are copied onto each cell by dashboard.js
+     (data-label) and shown through ::before. */
+  .dash-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .dash-table,
+  .dash-table tbody,
+  .dash-table tr,
+  .dash-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .dash-table tbody tr {
+    padding: .7rem 0;
+    border-bottom: 1px solid rgba(36, 26, 29, .08);
+  }
+
+  .dash-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .dash-table td {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .4rem 1.1rem;
+    text-align: right;
+  }
+
+  .dash-table td[data-label]::before {
+    content: attr(data-label);
+    flex: none;
+    text-align: left;
+    font-size: .7rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink-400);
+  }
+
+  .dash-table td:not([data-label]) {
+    justify-content: flex-start;
+    padding-top: .6rem;
+  }
+
+  .dash-table td:empty {
+    display: none;
+  }
+
+  .dash-table .btn-row {
+    justify-content: flex-start;
+  }
+
+  /* new sections */
+  .dash-tiers,
+  .dash-coupons,
+  .dash-slots,
+  .dash-train,
+  .dash-mix__legend {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-loyalty,
+  .dash-chart,
+  .dash-mix {
+    padding: 1.2rem;
+  }
+
+  .dash-bars {
+    gap: .3rem;
+    height: 180px;
+  }
+
+  .dash-bar__val {
+    font-size: .62rem;
+  }
+
+  .dash-setting {
+    flex-wrap: wrap;
+    padding: 1rem 1.1rem;
+  }
+
+  .dash-setting__text {
+    flex-basis: calc(100% - 42px - 1rem);
+  }
+
+  .dash-setting__act {
+    width: 100%;
+    padding-left: calc(42px + 1rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .dash-coupon {
+    --side: 108px;
+  }
+
+  .dash-coupon__value {
+    font-size: 1.45rem;
+  }
+
+  .dash-slot {
+    font-size: .7rem;
+  }
+}/* Sidebar email styling - mobile only */
+.dash-sidebar__user-email { text-align: center;
+  display: none;
+  font-size: .8rem;
+  color: rgba(250, 246, 239, .65);
+  margin-bottom: 2.2rem;
+}
+
+
+@media (max-width: 960px) {
+  .dash-sidebar__user-email { text-align: center;
+    display: block;
+  }
+}
+
+/* Header email styling - desktop only */
+.dash-user-email {
+  font-size: .88rem;
+  font-weight: 500;
+  color: var(--ink-600);
+}
+@media (max-width: 640px) {
+  .dash-user-email {
+    display: none;
+  }
+}

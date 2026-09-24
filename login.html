@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Stackly</title>
+  <meta name="description" content="Sign in to your Stackly account as a customer or salon manager.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+   <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+
+<body class="auth-page">
+
+  <div class="auth-shell">
+
+    <!-- LEFT VISUAL -->
+    <aside class="auth-visual">
+      <div class="auth-visual__body">
+        <p class="auth-visual__eyebrow">Welcome back</p>
+        <p class="auth-visual__quote">Beauty should feel like <em>breathing out.</em> Sign in to pick up right where
+          your ritual left off.</p>
+      </div>
+      <div class="auth-visual__meta">
+        <div><strong>19</strong>chairs</div>
+        <div><strong>4.9</strong>average rating</div>
+        <div><strong>12k+</strong>rituals booked</div>
+      </div>
+    </aside>
+
+    <!-- RIGHT FORM -->
+    <div class="auth-form-wrap">
+
+      <!-- Sticky top bar -->
+      <div class="auth-form-header">
+        <a href="index.html" class="auth-form-header__logo">
+          <img src="assets/images/stackly-logo.webp" alt="Stackly logo" class="auth-logo-img">
+        </a>
+        <a href="index.html" class="auth-form-header__back">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Home
+        </a>
+      </div>
+
+      <!-- Scrollable card area -->
+      <div class="auth-form-content">
+        <div class="auth-card">
+          <p class="auth-card__eyebrow">Sign in</p>
+          <h1>Good to see you</h1>
+          <p class="auth-card__sub">Choose how you'd like to sign in to Stackly.</p>
+
+          <div class="role-toggle" id="loginRoleToggle" data-role="customer">
+            <button type="button" data-role="customer" class="is-active"><i class="fas fa-user"></i> Customer</button>
+            <button type="button" data-role="manager"><i class="fas fa-user-tie"></i> Salon Manager</button>
+          </div>
+
+          <form id="loginForm" novalidate>
+            <div class="form-group">
+              <label for="loginEmail">Email address</label>
+              <div class="form-control-wrap">
+                <input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email">
+              </div>
+              <p class="field-error">Enter a valid email address.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword">Password</label>
+              <div class="form-control-wrap">
+                <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password">
+                <button type="button" class="password-toggle" data-target="loginPassword">Show</button>
+              </div>
+              <p class="field-error">Password must be at least 6 characters.</p>
+            </div>
+
+            <div class="form-meta-row">
+              <label class="form-check">
+                <input type="checkbox" id="loginRemember">
+                Remember me
+              </label>
+              <a href="404.html">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn--primary auth-submit">Sign In<i class="fas fa-paper-plane"></i></button>
+            <p class="form-note" id="loginNote"></p>
+          </form>
+
+          <div class="auth-divider">or continue with</div>
+
+          <a href="404.html" class="btn btn--social js-google-auth" style="text-decoration: none; display: flex;">
+            <i class="fab fa-google"></i>
+            Sign in with Google
+          </a>
+
+          <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/auth.js"></script>
+</body>
+
+</html>
