@@ -1,9 +1,5 @@
 /* ==========================================================================
    Stackly — blog.js
-   Nav / menu / cursor chrome (shared feel with the rest of the site) +
-   page-specific animations: hero intro + counters, featured story reveal,
-   filterable article grid, draggable trending strip, tag cloud filtering,
-   newsletter forms.
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,16 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.body.classList.add("lock");
 
-  /* ------------------------------------------------------------------ */
-  /* AOS HELPERS                                                         */
-  /* AOS measures every element's trigger point once, at init. Anything  */
-  /* that changes the page height afterwards (the article filter hides   */
-  /* cards) leaves those cached points stale, so sections further down   */
-  /* never reach their trigger and stay at opacity 0. refreshLayout()    */
-  /* re-measures; startRevealFallback() is the safety net that reveals   */
-  /* any [data-aos] element the moment it actually scrolls into view,    */
-  /* even if AOS's cached position is wrong.                             */
-  /* ------------------------------------------------------------------ */
+
   function refreshLayout() {
     if (typeof AOS !== "undefined") AOS.refreshHard();
     ScrollTrigger.refresh();
@@ -54,12 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("lock");
       ScrollTrigger.refresh();
 
-      /* AOS is initialised only now, once the preloader has fully lifted —
-         initialising it earlier lets its IntersectionObserver mark
-         above-the-fold elements (like the hero) as already in view and
-         fade them in while they're still hidden behind the preloader, so
-         by the time the preloader clears there's no entrance animation
-         left to see. */
+     
       AOS.init({
         duration: 800,
         easing: "ease-out-cubic",
@@ -245,17 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => applyFilter(btn.dataset.filter))
   );
 
-  /* Topic rows navigate to 404.html — no filter scroll needed */
-
-  /* ------------------------------------------------------------------ */
-  /* 4–7. Trending / Topics / Editor's Note / Final CTA                  */
-  /* AOS data-attributes on the HTML elements handle all scroll-reveal   */
-  /* for these sections — no GSAP ScrollTrigger needed here.             */
-  /* ------------------------------------------------------------------ */
-
-  /* ------------------------------------------------------------------ */
-  /* NEWSLETTER FORM (footer) — front-end only confirmation              */
-  /* ------------------------------------------------------------------ */
+  
   const newsletterForm = document.getElementById("newsletterForm");
   if (newsletterForm) {
     const emailInput = newsletterForm.querySelector("input");

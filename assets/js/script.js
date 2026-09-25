@@ -1,15 +1,11 @@
 /* ==========================================================================
    Stackly — script.js
-   Preloader → GSAP hero intro → ScrollTrigger reveals → pinned ritual scroll
-   → animated counters → auto-scrolling gallery → testimonial carousel → nav/menu
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  /* Recalculate ScrollTrigger positions once all images have finished
-     loading — large hero/service/gallery images shift page layout after
-     DOMContentLoaded fires, which can throw off trigger offsets. */
+  
   window.addEventListener("load", () => ScrollTrigger.refresh());
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

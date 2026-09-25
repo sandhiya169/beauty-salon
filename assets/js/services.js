@@ -1,8 +1,5 @@
 /* ==========================================================================
    Stackly — services.js
-   Standalone script for services.html (do not load script.js on this page).
-   Preloader → nav/menu/cursor → hero intro → filter grid → price accordion
-   → add-on marquee → sticky appointment flow → membership cards → FAQ
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {

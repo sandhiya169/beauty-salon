@@ -1,8 +1,5 @@
 /* ==========================================================================
    Stackly — contact.js
-   Nav / menu / cursor chrome (shared feel with the homepage) + page-specific
-   animations: hero intro, quick-contact reveal, form/map split, drawn
-   directions timeline, live hours badge, FAQ accordion.
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,10 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.remove("lock");
       ScrollTrigger.refresh();
 
-      /* AOS is initialised only now, once the preloader has fully lifted —
-         initialising it earlier lets its IntersectionObserver mark
-         above-the-fold elements (the hero) as already in view and animate
-         them while they're still hidden behind the preloader. */
+     
       AOS.init({
         duration: 800,
         easing: "ease-out-cubic",

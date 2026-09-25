@@ -1,8 +1,5 @@
 /* ==========================================================================
    Stackly — 404.js
-   Standalone script for 404.html. No preloader, no nav — this page loads
-   fast and alone. Entrance sequence → floating chair → drifting petals
-   → cursor → chip stagger.
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {

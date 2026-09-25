@@ -49,6 +49,7 @@
   height: 100%;
   width: auto;
   display: inline-block;
+  margin-right: 5em;
 }
 
 .dash-sidebar__brand span {
@@ -56,12 +57,13 @@
 }
 
 .dash-sidebar__role {
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: .05em;
   color: var(--blush-300);
   margin-bottom: 1.2rem;
   font-family: var(--font-display);
   text-align: center;
+  margin-right: 4em;
 }
 
 .dash-nav {

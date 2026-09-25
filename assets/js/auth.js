@@ -1,8 +1,5 @@
 /* ==========================================================================
    Stackly — auth.js
-   Client-side validation ONLY. No credentials are ever stored, sent, or
-   verified — this file simply checks that fields look well-formed, then
-   simulates success and redirects.
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,7 +1,5 @@
 /* ==========================================================================
    Stackly — dashboard.js
-   Sidebar section switching, mobile drawer, logout / home, and the
-   demo-only action buttons that route to the 404 page.
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -51,9 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* Responsive tables — copy each column heading onto its cells so the
-     stacked mobile layout (see dashboard.css) can label every value.
-     New rows added later are labelled automatically. */
+ 
   document.querySelectorAll(".dash-table").forEach((table) => {
     const heads = Array.from(table.querySelectorAll("thead th")).map((th) => th.textContent.trim());
     table.querySelectorAll("tbody tr").forEach((row) => {

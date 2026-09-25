@@ -1,8 +1,5 @@
 /* ==========================================================================
    Stackly — about.js
-   Standalone script for about.html (do not load script.js on this page).
-   Preloader → nav/menu/cursor → masthead intro → drawn timeline rail
-   → expanding principle panels → counters → people → parallax space strip
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
