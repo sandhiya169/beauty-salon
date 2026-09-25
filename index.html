@@ -658,20 +658,26 @@
           </div>
           <div class="book__field">
             <label for="bookService">Service</label>
-            <select id="bookService" required>
-              <option value="" disabled selected>Choose one</option>
-              <option>Hair Studio</option>
-              <option>Skin Atelier</option>
-              <option>Nail Bar</option>
-              <option>Lash &amp; Brow</option>
-              <option>Body Rituals</option>
-              <option>Makeup Studio</option>
-              <option>The Stackly Hour</option>
-            </select>
+            <div class="book__select-wrap">
+              <select id="bookService" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Hair Studio</option>
+                <option>Skin Atelier</option>
+                <option>Nail Bar</option>
+                <option>Lash &amp; Brow</option>
+                <option>Body Rituals</option>
+                <option>Makeup Studio</option>
+                <option>The Stackly Hour</option>
+              </select>
+              <i class="fa-solid fa-chevron-down book__select-chevron"></i>
+            </div>
           </div>
           <div class="book__field">
             <label for="bookDate">Preferred date</label>
-            <input type="date" id="bookDate" required>
+            <div class="book__select-wrap">
+              <input type="text" id="bookDate" placeholder="dd-mm-yyyy" pattern="\d{2}-\d{2}-\d{4}" required>
+              <i class="fa-regular fa-calendar book__select-chevron"></i>
+            </div>
           </div>
           <button type="submit" class="btn btn--primary book__submit">Request appointment</button>
         </form>

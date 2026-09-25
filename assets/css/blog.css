@@ -1081,6 +1081,7 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     padding: 5rem var(--pad);
+    overflow-x: hidden;
   }
 
   .topics__left {

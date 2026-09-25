@@ -2439,7 +2439,7 @@ body.home .nav.is-scrolled {
 }
 
 .footer__social a:hover {
-  color: var(--gold-300);
+  color: var(--blush-500);
   transform: translateY(-2px);
 }
 
@@ -2500,9 +2500,6 @@ body.home .nav.is-scrolled {
     display: flex;
   }
 
-  /* Solid bar on tablet/mobile. The header sits above the full-screen menu
-     (z-index 500 vs 480); with a transparent bar the dark logo and the
-     dark close (X) icon vanished against the dark overlay. */
   .nav,
   .nav.is-scrolled {
     background: var(--ivory-50);
